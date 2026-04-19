@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de impressão 3D da Apex 3D com carrinho de pedidos e finalização pelo WhatsApp via Pix.">
+  <title>Apex 3D Impressões | Catálogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Apex 3D Impressões">
+      <img src="APEX 3D IMPRESSÕES.png" alt="Logo Apex 3D Impressões">
+      <span>Apex 3D</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#personalizado">Personalizado</a>
+      <a href="#pedido">Pedido</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="cart-trigger" type="button" data-open-cart aria-label="Abrir carrinho">
+      <span>Carrinho</span>
+      <strong data-cart-count>0</strong>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-panel hero-panel-one">
+          <img src="Fotos/Dummys/Dummy 13 - version 1.0!.png" alt="">
+        </div>
+        <div class="hero-panel hero-panel-two">
+          <img src="Fotos/Utensílios e Decoração/Minecraft Movie TNT PopCorn Bucket.png" alt="">
+        </div>
+        <div class="hero-panel hero-panel-three">
+          <img src="Fotos/Utensílios e Decoração/Busto de Pantera Geométrica Arte Low-Poly Moderna.jpg" alt="">
+        </div>
+      </div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Impressão 3D sob pedido</p>
+        <h1>Apex 3D</h1>
+        <p class="hero-copy">Catálogo de peças, acessórios e objetos personalizados para colecionadores, dummies, decoração e presentes criativos.</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#catalogo">Ver catálogo</a>
+          <button class="secondary-link" type="button" data-open-cart>Ver carrinho</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="payment-note" aria-label="Informação sobre pagamento">
+      <strong>Importante:</strong>
+      <span>Os pedidos são feitos pelo site para facilitar a organização. O pagamento será combinado depois pelo WhatsApp via Pix.</span>
+    </section>
+
+    <section class="color-note" aria-label="Cores disponíveis">
+      <strong>Cores disponíveis</strong>
+      <div class="color-swatches">
+        <span style="--swatch: #ffffff">Branco</span>
+        <span style="--swatch: #080808">Preto</span>
+        <span style="--swatch: #2f7df6">Azul</span>
+        <span style="--swatch: #ff8fc7">Rosa</span>
+        <span style="--swatch: #2fbe63">Verde</span>
+        <span style="--swatch: #ffd318">Amarelo</span>
+        <span style="--swatch: #8b5cf6">Lavanda</span>
+        <span style="--swatch: #ef3030">Vermelho</span>
+      </div>
+    </section>
+
+    <section class="intro-section" id="pedido">
+      <div>
+        <p class="eyebrow">Como funciona</p>
+        <h2>Escolha as peças, envie o pedido e finalize pelo WhatsApp.</h2>
+      </div>
+      <ol class="steps" aria-label="Etapas do pedido">
+        <li><span>1</span>Adicione produtos ao carrinho.</li>
+        <li><span>2</span>Preencha seus dados para orçamento e entrega.</li>
+        <li><span>3</span>Combine o Pix e detalhes finais pelo WhatsApp.</li>
+      </ol>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Catálogo</p>
+          <h2>Produtos em destaque</h2>
+        </div>
+        <div class="filter-tabs" role="list" aria-label="Filtros do catálogo">
+          <button class="filter-btn is-active" type="button" data-filter="Todos">Todos</button>
+          <button class="filter-btn" type="button" data-filter="Geek">Geek</button>
+          <button class="filter-btn" type="button" data-filter="Utensílios">Utensílios</button>
+          <button class="filter-btn" type="button" data-filter="Decoração">Decoração</button>
+          <button class="filter-btn" type="button" data-filter="Kpop">Kpop</button>
+          <button class="filter-btn" type="button" data-filter="Dummys">Dummys</button>
+          <button class="filter-btn" type="button" data-filter="Acessórios">Acessórios</button>
+          <button class="filter-btn" type="button" data-filter="Kit Dummy Soldado">Kit Dummy Soldado</button>
+        </div>
+      </div>
+
+      <div class="product-grid" data-product-grid aria-live="polite"></div>
+    </section>
+
+    <section class="custom-section" id="personalizado">
+      <div class="custom-copy">
+        <p class="eyebrow">Sob medida</p>
+        <h2>Quer algo personalizado?</h2>
+        <p>Envie sua ideia para a Apex 3D. Pode ser tamanho diferente, cor, peça para dummy, decoração, presente, reposição ou um modelo específico.</p>
+        <a class="whatsapp-inline" href="#" target="_blank" rel="noopener" data-whatsapp-link-custom>Falar no WhatsApp</a>
+      </div>
+
+      <form class="custom-form" data-custom-form method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Pedido personalizado - Apex 3D">
+        <input type="hidden" name="Tipo de solicitação" value="Pedido personalizado">
+
+        <label>
+          Nome
+          <input type="text" name="Nome" autocomplete="name" required>
+        </label>
+        <label>
+          WhatsApp
+          <input type="tel" name="WhatsApp" autocomplete="tel" required>
+        </label>
+        <label>
+          E-mail
+          <input type="email" name="Email" autocomplete="email" required>
+        </label>
+        <label>
+          O que você quer personalizar?
+          <textarea name="Pedido personalizado" rows="5" placeholder="Descreva a peça, tamanho, cor, tema, quantidade e qualquer detalhe importante." required></textarea>
+        </label>
+
+        <button class="submit-order" type="submit">Enviar solicitação</button>
+        <p class="order-status" data-custom-status role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <aside class="cart-panel" data-cart-panel aria-hidden="true">
+    <div class="cart-backdrop" data-close-cart></div>
+    <div class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">Pedido</p>
+          <h2 id="cart-title">Carrinho</h2>
+        </div>
+        <button class="icon-button" type="button" data-close-cart aria-label="Fechar carrinho">x</button>
+      </div>
+
+      <div class="cart-items" data-cart-items></div>
+
+      <div class="cart-summary">
+        <div>
+          <span>Total</span>
+          <strong data-cart-total>R$ 0,00</strong>
+        </div>
+        <small>Pagamento tratado depois pelo WhatsApp via Pix.</small>
+      </div>
+
+      <form class="checkout-form" data-checkout-form method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Novo pedido - Apex 3D">
+        <input type="hidden" name="Resumo do pedido" data-order-summary>
+
+        <label>
+          Nome do cliente
+          <input type="text" name="Nome" autocomplete="name" required>
+        </label>
+        <label>
+          Telefone
+          <input type="tel" name="Telefone" autocomplete="tel" required>
+        </label>
+        <label>
+          E-mail
+          <input type="email" name="Email" autocomplete="email" required>
+        </label>
+        <label>
+          Cidade/bairro
+          <input type="text" name="Cidade/Bairro" required>
+        </label>
+        <label>
+          Observações
+          <textarea name="Observações" rows="4" placeholder="Cor, tamanho, prazo desejado ou outra personalização"></textarea>
+        </label>
+
+        <button class="submit-order" type="submit">Confirmar pedido</button>
+        <p class="order-status" data-order-status role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="success-message" data-success-message hidden>
+        <h3>Pedido enviado com sucesso!</h3>
+        <p>Recebemos os dados do carrinho. Agora chame a Apex 3D no WhatsApp para finalizar o pagamento por Pix.</p>
+        <a class="whatsapp-button" href="#" target="_blank" rel="noopener" data-whatsapp-link>Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="site-footer" id="contato">
+    <div>
+      <img src="APEX 3D IMPRESSÕES.png" alt="Apex 3D Impressões">
+      <p>Apex 3D Impressões</p>
+    </div>
+    <p>Pedidos organizados pelo site. Pagamento e produção combinados pelo WhatsApp via Pix.</p>
+  </footer>
+
+  <a class="floating-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Chamar a Apex 3D no WhatsApp" data-floating-whatsapp>
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
