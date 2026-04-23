@@ -1,4 +1,4 @@
-# Apex 3D Impressões - Site catálogo
+﻿# Apex 3D Impressões - Site catálogo
 
 Site estático em HTML, CSS e JavaScript para catálogo com carrinho de pedidos. Não há pagamento online: o pedido é organizado pelo site e o pagamento é combinado depois pelo WhatsApp via Pix.
 
@@ -8,7 +8,7 @@ Site estático em HTML, CSS e JavaScript para catálogo com carrinho de pedidos.
 - `style.css`: visual, responsividade e animações.
 - `script.js`: produtos, carrinho, envio do pedido e link do WhatsApp.
 - `fotos/`: imagens usadas nos produtos.
-- `logo-apex-3d.png`: logo usada no cabeçalho e rodapé.
+- `APEX 3D IMPRESSÕES.png`: logo usada no cabeçalho e rodapé.
 
 ## Onde editar o e-mail e WhatsApp
 
@@ -84,7 +84,7 @@ Importante: o FormSubmit não envia quando o site é aberto direto pelo arquivo 
    - `script.js`
    - `README.md`
    - `fotos/`
-   - `logo-apex-3d.png`
+   - `APEX 3D IMPRESSÕES.png`
 4. No GitHub, abra `Settings`.
 5. Entre em `Pages`.
 6. Em `Build and deployment`, escolha:
@@ -97,3 +97,4 @@ Importante: o FormSubmit não envia quando o site é aberto direto pelo arquivo 
 ## Teste local
 
 Você pode abrir o arquivo `index.html` diretamente no navegador para testar catálogo, carrinho e botão de WhatsApp. Para envio real de e-mail, configure o e-mail no `script.js`.
+

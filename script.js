@@ -12,7 +12,7 @@ const products = [
     category: "Geek",
     price: 25,
     description: "Balde temático impresso em 3D para pipoca, setup gamer ou decoração.",
-    image: "fotos/utensilios-decoracao/Minecraft Movie TNT PopCorn Bucket.png"
+    image: "Fotos/Utensílios e Decoração/Minecraft Movie TNT PopCorn Bucket.png"
   },
   {
     id: "balde-tubo-teletransporte",
@@ -20,7 +20,7 @@ const products = [
     category: "Geek",
     price: 65,
     description: "Balde criativo para filmes, jogos e presentes personalizados.",
-    image: "fotos/utensilios-decoracao/Balde de Pipoca para Filmes Tubo de Teletransporte Lanche para Jogo.jpg"
+    image: "Fotos/Utensílios e Decoração/Balde de Pipoca para Filmes Tubo de Teletransporte Lanche para Jogo.jpg"
   },
   {
     id: "caixa-organizadora-cosmeticos",
@@ -28,7 +28,7 @@ const products = [
     category: "Utensílios",
     price: 35,
     description: "Organizador funcional para bancada, penteadeira ou mesa de trabalho.",
-    image: "fotos/utensilios-decoracao/Caixa organizadora de cosméticos.jpg"
+    image: "Fotos/Utensílios e Decoração/Caixa organizadora de cosméticos.jpg"
   },
   {
     id: "hexa-link-prateleiras",
@@ -36,7 +36,7 @@ const products = [
     category: "Utensílios",
     price: 7,
     description: "Módulo de prateleira modular de precisão para organização personalizada.",
-    image: "fotos/utensilios-decoracao/O Hexa-Link Sistema de Prateleiras Modulares de Precisão.jpg"
+    image: "Fotos/Utensílios e Decoração/O Hexa-Link Sistema de Prateleiras Modulares de Precisão.jpg"
   },
   {
     id: "carro-formula-um",
@@ -44,7 +44,7 @@ const products = [
     category: "Geek",
     price: 7,
     description: "Miniatura decorativa para fãs de automobilismo e colecionáveis.",
-    image: "fotos/utensilios-decoracao/Carro de Fórmula Um e Texto Invertido.jpg"
+    image: "Fotos/Utensílios e Decoração/Carro de Fórmula Um e Texto Invertido.jpg"
   },
   {
     id: "suporte-controle-cubone",
@@ -52,7 +52,7 @@ const products = [
     category: "Geek",
     price: 25,
     description: "Suporte estilizado para joystick, controle remoto ou acessórios de setup.",
-    image: "fotos/utensilios-decoracao/Suporte Universal para Controle Joystick de Crânio de Cubone.jpg"
+    image: "Fotos/Utensílios e Decoração/Suporte Universal para Controle Joystick de Crânio de Cubone.jpg"
   },
   {
     id: "pikachu-monitor",
@@ -60,7 +60,7 @@ const products = [
     category: "Geek",
     price: 5,
     description: "Mini peça para apoiar no monitor e dar personalidade ao setup.",
-    image: "fotos/utensilios-decoracao/Pikachu Adormecido - Pet de Monitor.jpg"
+    image: "Fotos/Utensílios e Decoração/Pikachu Adormecido - Pet de Monitor.jpg"
   },
   {
     id: "porta-pipoca-cogumelo",
@@ -68,7 +68,7 @@ const products = [
     category: "Geek",
     price: 75,
     description: "Balde de salgadinhos e pipoca com visual divertido para sessões de filme.",
-    image: "fotos/utensilios-decoracao/Porta-Pipoca Balde de Salgadinhos Super Cogumelo.jpg"
+    image: "Fotos/Utensílios e Decoração/Porta-Pipoca Balde de Salgadinhos Super Cogumelo.jpg"
   },
   {
     id: "pantera-geometrica",
@@ -76,7 +76,7 @@ const products = [
     category: "Decoração",
     price: 25,
     description: "Arte low-poly moderna com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Busto de Pantera Geométrica Arte Low-Poly Moderna.jpg"
+    image: "Fotos/Utensílios e Decoração/Busto de Pantera Geométrica Arte Low-Poly Moderna.jpg"
   },
   {
     id: "bonsai-torcido",
@@ -84,7 +84,7 @@ const products = [
     category: "Decoração",
     price: 25,
     description: "Peça decorativa elegante com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Bonsai Torcido por Grafit.jpg"
+    image: "Fotos/Utensílios e Decoração/Bonsai Torcido por Grafit.jpg"
   },
   {
     id: "decoracao-gato",
@@ -92,7 +92,7 @@ const products = [
     category: "Decoração",
     price: 20,
     description: "Escultura temática para mesa, estante ou presente personalizado.",
-    image: "fotos/utensilios-decoracao/Decoração de gato.jpg"
+    image: "Fotos/Utensílios e Decoração/Decoração de gato.jpg"
   },
   {
     id: "flores-arame",
@@ -100,7 +100,7 @@ const products = [
     category: "Decoração",
     price: 5,
     description: "Detalhe minimalista para compor ambientes com leveza.",
-    image: "fotos/utensilios-decoracao/Flores de Arame Minimalistas.jpg"
+    image: "Fotos/Utensílios e Decoração/Flores de Arame Minimalistas.jpg"
   },
   {
     id: "coelho-pascoa",
@@ -108,7 +108,7 @@ const products = [
     category: "Decoração",
     price: 8,
     description: "Peça sazonal com tamanho personalizável para decoração ou presente.",
-    image: "fotos/utensilios-decoracao/Coelho da Páscoa.jpg"
+    image: "Fotos/Utensílios e Decoração/Coelho da Páscoa.jpg"
   },
   {
     id: "estatua-jesus",
@@ -116,7 +116,7 @@ const products = [
     category: "Decoração",
     price: 20,
     description: "Escultura geométrica com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Estátua Geométrica de Jesus.jpg"
+    image: "Fotos/Utensílios e Decoração/Estátua Geométrica de Jesus.jpg"
   },
   {
     id: "lobo-uivando-lua",
@@ -124,7 +124,7 @@ const products = [
     category: "Decoração",
     price: 20,
     description: "Cena decorativa de lobo com lua, com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Escultura de Lobo Uivando e Lua.jpg"
+    image: "Fotos/Utensílios e Decoração/Escultura de Lobo Uivando e Lua.jpg"
   },
   {
     id: "lobo-coroado",
@@ -132,7 +132,7 @@ const products = [
     category: "Decoração",
     price: 30,
     description: "Escultura decorativa marcante com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Lobo Coroado.jpg"
+    image: "Fotos/Utensílios e Decoração/Lobo Coroado.jpg"
   },
   {
     id: "lobo-geometrico",
@@ -140,7 +140,7 @@ const products = [
     category: "Decoração",
     price: 25,
     description: "Peça low-poly para decoração de prateleiras e escritórios.",
-    image: "fotos/utensilios-decoracao/Escultura de Lobo Geométrico.jpg"
+    image: "Fotos/Utensílios e Decoração/Escultura de Lobo Geométrico.jpg"
   },
   {
     id: "lobo-uivante-low-poly",
@@ -148,7 +148,7 @@ const products = [
     category: "Decoração",
     price: 25,
     description: "Escultura low-poly com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Lobo Uivante Low Poly.jpg"
+    image: "Fotos/Utensílios e Decoração/Lobo Uivante Low Poly.jpg"
   },
   {
     id: "cubo-infinito",
@@ -156,7 +156,7 @@ const products = [
     category: "Decoração",
     price: 10,
     description: "Objeto articulado e decorativo com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Cubo Infinito.jpg"
+    image: "Fotos/Utensílios e Decoração/Cubo Infinito.jpg"
   },
   {
     id: "fantasmas-pacman",
@@ -164,7 +164,7 @@ const products = [
     category: "Geek",
     price: 10,
     description: "Miniaturas geek com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Fantasmas do PAC-MAN.jpg"
+    image: "Fotos/Utensílios e Decoração/Fantasmas do PAC-MAN.jpg"
   },
   {
     id: "decorative-f1-logo",
@@ -172,7 +172,7 @@ const products = [
     category: "Geek",
     price: 15,
     description: "Logo decorativo para fãs de corrida, com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Decorative F1 Logo.png"
+    image: "Fotos/Utensílios e Decoração/Decorative F1 Logo.png"
   },
   {
     id: "cute-low-poly-cat",
@@ -180,7 +180,7 @@ const products = [
     category: "Decoração",
     price: 5,
     description: "Gato low-poly decorativo com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Cute Low Poly Cat.png"
+    image: "Fotos/Utensílios e Decoração/Cute Low Poly Cat.png"
   },
   {
     id: "skull-candy-bowl",
@@ -188,7 +188,7 @@ const products = [
     category: "Geek",
     price: 30,
     description: "Recipiente decorativo em formato de caveira para doces ou objetos.",
-    image: "fotos/utensilios-decoracao/Realistic Skull Candy Bowl.png"
+    image: "Fotos/Utensílios e Decoração/Realistic Skull Candy Bowl.png"
   },
   {
     id: "cute-low-poly-owl",
@@ -196,7 +196,7 @@ const products = [
     category: "Decoração",
     price: 5,
     description: "Coruja low-poly com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Cute Low Poly Owl.png"
+    image: "Fotos/Utensílios e Decoração/Cute Low Poly Owl.png"
   },
   {
     id: "low-poly-howling-wolf",
@@ -204,7 +204,7 @@ const products = [
     category: "Decoração",
     price: 15,
     description: "Lobo uivando em estilo low-poly com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Low Poly Howling Wolf.png"
+    image: "Fotos/Utensílios e Decoração/Low Poly Howling Wolf.png"
   },
   {
     id: "tulip-flower",
@@ -212,7 +212,7 @@ const products = [
     category: "Decoração",
     price: 8,
     description: "Flor decorativa impressa em 3D com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Tulip Flower on Stem.png"
+    image: "Fotos/Utensílios e Decoração/Tulip Flower on Stem.png"
   },
   {
     id: "low-poly-dog",
@@ -220,7 +220,7 @@ const products = [
     category: "Decoração",
     price: 8,
     description: "Cachorro low-poly com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Low Poly Dog.png"
+    image: "Fotos/Utensílios e Decoração/Low Poly Dog.png"
   },
   {
     id: "lego-flowers",
@@ -228,7 +228,7 @@ const products = [
     category: "Decoração",
     price: 15,
     description: "Flores decorativas inspiradas em peças montáveis.",
-    image: "fotos/utensilios-decoracao/LEGO Flowers.png"
+    image: "Fotos/Utensílios e Decoração/LEGO Flowers.png"
   },
   {
     id: "low-poly-cat-2",
@@ -236,7 +236,7 @@ const products = [
     category: "Decoração",
     price: 8,
     description: "Gato low-poly em versão alternativa com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Low Poly Cat 2.0.png"
+    image: "Fotos/Utensílios e Decoração/Low Poly Cat 2.0.png"
   },
   {
     id: "low-poly-bunny",
@@ -244,7 +244,7 @@ const products = [
     category: "Decoração",
     price: 15,
     description: "Coelho low-poly decorativo com tamanho personalizável.",
-    image: "fotos/utensilios-decoracao/Low Poly Easter Bunny Sculpture.png"
+    image: "Fotos/Utensílios e Decoração/Low Poly Easter Bunny Sculpture.png"
   },
   {
     id: "modular-storage-system",
@@ -252,7 +252,7 @@ const products = [
     category: "Utensílios",
     price: 15,
     description: "Sistema modular para organizar peças, ferramentas ou itens de mesa.",
-    image: "fotos/utensilios-decoracao/Modular Storage System.png"
+    image: "Fotos/Utensílios e Decoração/Modular Storage System.png"
   },
   {
     id: "headphones-stand",
@@ -260,7 +260,7 @@ const products = [
     category: "Utensílios",
     price: 20,
     description: "Suporte para headphone, ideal para setup e mesa de trabalho.",
-    image: "fotos/utensilios-decoracao/Headphones Stand.png"
+    image: "Fotos/Utensílios e Decoração/Headphones Stand.png"
   },
   {
     id: "makeup-organizer-inflated-bathroom-set",
@@ -268,7 +268,7 @@ const products = [
     category: "Utensílios",
     price: 30,
     description: "Organizador para maquiagem, pincéis e itens de banheiro ou penteadeira.",
-    image: "fotos/utensilios-decoracao/MakeUp Organizer (Inflated Bathroom Set).png"
+    image: "Fotos/Utensílios e Decoração/MakeUp Organizer (Inflated Bathroom Set).png"
   },
   {
     id: "vase-with-roses-stems",
@@ -276,7 +276,7 @@ const products = [
     category: "Decoração",
     price: 25,
     description: "Vaso decorativo impresso em 3D. Não deixe em contato prolongado com objetos úmidos, como terra molhada.",
-    image: "fotos/utensilios-decoracao/Vase with Roses and Stems - Flowers Bouquet.png"
+    image: "Fotos/Utensílios e Decoração/Vase with Roses and Stems - Flowers Bouquet.png"
   },
   {
     id: "balde-interrogacao",
@@ -284,7 +284,7 @@ const products = [
     category: "Geek",
     price: 30,
     description: "Balde temático para pipoca, doces ou decoração geek.",
-    image: "fotos/utensilios-decoracao/Balde de Pipoca para Filme Bloco de Interrogação.jpg"
+    image: "Fotos/Utensílios e Decoração/Balde de Pipoca para Filme Bloco de Interrogação.jpg"
   },
   {
     id: "suporte-pinceis",
@@ -292,7 +292,7 @@ const products = [
     category: "Utensílios",
     price: 20,
     description: "Organizador para pincéis, maquiagem e itens de bancada.",
-    image: "fotos/utensilios-decoracao/Suporte para Pincéis de Maquiagem.png"
+    image: "Fotos/Utensílios e Decoração/Suporte para Pincéis de Maquiagem.png"
   },
   {
     id: "bts-arirang-tour-sign",
@@ -300,7 +300,7 @@ const products = [
     category: "Kpop",
     price: 15,
     description: "Peça decorativa Kpop com tamanho personalizável.",
-    image: "fotos/kpop/BTS Arirang Tour Sign.jpg"
+    image: "Fotos/Kpop/BTS Arirang Tour Sign.jpg"
   },
   {
     id: "bts-statue",
@@ -308,7 +308,7 @@ const products = [
     category: "Kpop",
     price: 20,
     description: "Estátua temática BTS com tamanho personalizável.",
-    image: "fotos/kpop/BTS Statue Bangtan Sonyeondan.jpg"
+    image: "Fotos/Kpop/BTS Statue Bangtan Sonyeondan.jpg"
   },
   {
     id: "huntrix-logo-keychain",
@@ -316,7 +316,7 @@ const products = [
     category: "Kpop",
     price: 6,
     description: "Chaveiro Kpop com tamanho personalizável.",
-    image: "fotos/kpop/KPop Demon Hunters Huntrix Logo Keychain version 2.jpg"
+    image: "Fotos/Kpop/KPop Demon Hunters Huntrix Logo Keychain version 2.jpg"
   },
   {
     id: "kpop-ornaments-set-2",
@@ -324,7 +324,7 @@ const products = [
     category: "Kpop",
     price: 20,
     description: "Grupos disponíveis: BTS, iKON, Oh My Girl, Day6, MCND, Everglow, EXID, N.Flying, SuJu, T-ARA, Hyuna, Apink, AOA, Dreamcatcher, BigBang, Girls' Generation, VIXX, BTOB, KARD, SHINee e f(x).",
-    image: "fotos/kpop/KPop Ornaments Set 2.jpg"
+    image: "Fotos/Kpop/KPop Ornaments Set 2.jpg"
   },
   {
     id: "kpop-ornaments",
@@ -332,7 +332,7 @@ const products = [
     category: "Kpop",
     price: 20,
     description: "Grupos disponíveis: ONEUS, K/DA, BTS, G-IDLE, ATEEZ, Seventeen, NCT, LOONA, Verivery, CLC, EXO, GFriend, The Boyz, Golden Child, Wanna One, ONF, TWICE, ITZY, TOO, A.C.E, NU'EST, Pentagon, SF9, Blackpink, GOT7, WayV, Astro, Stray Kids, AB6IX, TXT, Monsta X e Red Velvet.",
-    image: "fotos/kpop/KPop Ornaments.jpg"
+    image: "Fotos/Kpop/KPop Ornaments.jpg"
   },
   {
     id: "kpop-lightstick-keyrings",
@@ -340,7 +340,7 @@ const products = [
     category: "Kpop",
     price: 5,
     description: "Chaveiros inspirados em lightsticks de grupos Kpop.",
-    image: "fotos/kpop/KPop Lightstick keyrings.jpg"
+    image: "Fotos/Kpop/KPop Lightstick keyrings.jpg"
   },
   {
     id: "bts-logo-keychains",
@@ -348,7 +348,7 @@ const products = [
     category: "Kpop",
     price: 3,
     description: "Logos e chaveiros BTS para presente ou coleção.",
-    image: "fotos/kpop/BTS K Pop Logo and Keychains.jpg"
+    image: "Fotos/Kpop/BTS K Pop Logo and Keychains.jpg"
   },
   {
     id: "bts-headphone-stand",
@@ -356,7 +356,7 @@ const products = [
     category: "Kpop",
     price: 25,
     description: "Suporte de headphone temático BTS.",
-    image: "fotos/kpop/BTS Headphone Stand.jpg"
+    image: "Fotos/Kpop/BTS Headphone Stand.jpg"
   },
   {
     id: "huntrix-logo-stand",
@@ -364,7 +364,7 @@ const products = [
     category: "Kpop",
     price: 15,
     description: "Logo decorativo Huntrix para mesa, prateleira ou setup.",
-    image: "fotos/kpop/KPop Demon Hunters Huntrix Huntrx Logo Stand.png"
+    image: "Fotos/Kpop/KPop Demon Hunters Huntrix Huntrx Logo Stand.png"
   },
   {
     id: "saja-boys-light-stick",
@@ -372,7 +372,7 @@ const products = [
     category: "Kpop",
     price: 40,
     description: "Light stick temático Kpop Demon Hunter Saja boys.",
-    image: "fotos/kpop/Kpop Demon Hunter Saja boys light stick.png"
+    image: "Fotos/Kpop/Kpop Demon Hunter Saja boys light stick.png"
   },
   {
     id: "huntrix-light-stick",
@@ -380,7 +380,7 @@ const products = [
     category: "Kpop",
     price: 40,
     description: "Light stick temático Huntrix/Huntr-x para fãs de Kpop Demon Hunter.",
-    image: "fotos/kpop/Kpop Demon hunter Huntrix(Huntr-x) light Stick.png"
+    image: "Fotos/Kpop/Kpop Demon hunter Huntrix(Huntr-x) light Stick.png"
   },
   {
     id: "whalien-zero-oclock",
@@ -388,7 +388,7 @@ const products = [
     category: "Kpop",
     price: 30,
     description: "Peça decorativa Kpop WHALIEN ZERO O'CLOCK para mesa, estante ou setup.",
-    image: "fotos/kpop/WHALIEN ZERO O'CLOCK.png"
+    image: "Fotos/Kpop/WHALIEN ZERO O'CLOCK.png"
   },
   {
     id: "dummy-carbon-back-fists",
@@ -396,7 +396,7 @@ const products = [
     category: "Acessórios",
     price: 3.5,
     description: "Pack de punhos traseiros para Dummy 13.",
-    image: "fotos/acessorios-dummy/DummyCarbon 13 Back Fists Pack!.jpg"
+    image: "Fotos/Acessórios Dummy/DummyCarbon 13 Back Fists Pack!.jpg"
   },
   {
     id: "dummy-heavy-armor-kit",
@@ -404,7 +404,7 @@ const products = [
     category: "Acessórios",
     price: 10,
     description: "Kit de armadura pesada para personalizar Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 Version 1.0 Heavy Armor Kit.png"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Version 1.0 Heavy Armor Kit.png"
   },
   {
     id: "dummy-drop-leg-holster",
@@ -412,7 +412,7 @@ const products = [
     category: "Acessórios",
     price: 1,
     description: "Coldre de perna para pistol ou acessório tático.",
-    image: "fotos/acessorios-dummy/Dummy 13 Drop Leg Pistol Holster.png"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Drop Leg Pistol Holster.png"
   },
   {
     id: "dummy-extra-arms-backpack",
@@ -420,7 +420,7 @@ const products = [
     category: "Acessórios",
     price: 3,
     description: "Mochila com braços extras para composições de ação.",
-    image: "fotos/acessorios-dummy/Dummy 13 extra arms backpack.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 extra arms backpack.jpg"
   },
   {
     id: "dummy-assault-cannon-backpack",
@@ -428,7 +428,7 @@ const products = [
     category: "Acessórios",
     price: 1,
     description: "Mochila de canhão para Dummy 13.",
-    image: "fotos/acessorios-dummy/Extra Arms  Assault Cannon Backpack for Dummy 13.jpg"
+    image: "Fotos/Acessórios Dummy/Extra Arms  Assault Cannon Backpack for Dummy 13.jpg"
   },
   {
     id: "dummy-sword-arm",
@@ -436,7 +436,7 @@ const products = [
     category: "Acessórios",
     price: 0.5,
     description: "Braço com espada para customização do Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 Sword Arm.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Sword Arm.jpg"
   },
   {
     id: "dummy-power-claw",
@@ -444,7 +444,7 @@ const products = [
     category: "Acessórios",
     price: 2,
     description: "Garra de poder com visual agressivo para Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 Power Claw w Knuckle Dusters.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Power Claw w Knuckle Dusters.jpg"
   },
   {
     id: "dummy-spider-walker",
@@ -452,7 +452,7 @@ const products = [
     category: "Acessórios",
     price: 4,
     description: "Pernas mecânicas estilo aranha para Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 Spider Walker  Mech Legs.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Spider Walker  Mech Legs.jpg"
   },
   {
     id: "dummy-lightsaber",
@@ -460,7 +460,7 @@ const products = [
     category: "Acessórios",
     price: 0.5,
     description: "Sabre de luz em miniatura para Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 Lightsaber.png"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Lightsaber.png"
   },
   {
     id: "dummy-k9-compilation",
@@ -468,7 +468,7 @@ const products = [
     category: "Acessórios",
     price: 5,
     description: "Compilado K9 para cenas e acessórios do Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 K9 Compilation.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 K9 Compilation.jpg"
   },
   {
     id: "dummy-atv-quad",
@@ -476,7 +476,7 @@ const products = [
     category: "Acessórios",
     price: 5,
     description: "Veículo quadriciclo para composições com Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 ATV  Quad.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 ATV  Quad.jpg"
   },
   {
     id: "tesla-optimus-dummy",
@@ -484,7 +484,7 @@ const products = [
     category: "Dummys",
     price: 10,
     description: "Figura baseada em Dummy 13 com visual de robô.",
-    image: "fotos/acessorios-dummy/Tesla Optimus Bot 1.0 based on Dummy 13.jpg"
+    image: "Fotos/Acessórios Dummy/Tesla Optimus Bot 1.0 based on Dummy 13.jpg"
   },
   {
     id: "dummy-armor-plate-carrier",
@@ -492,7 +492,7 @@ const products = [
     category: "Acessórios",
     price: 0.5,
     description: "Peça de armadura e plate carrier para Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 ArmorPlate Carrier.png"
+    image: "Fotos/Acessórios Dummy/Dummy 13 ArmorPlate Carrier.png"
   },
   {
     id: "dummy-extra-hand-poses",
@@ -500,7 +500,7 @@ const products = [
     category: "Acessórios",
     price: 1,
     description: "Mãos extras para novas poses do Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 - extra hand poses.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 - extra hand poses.jpg"
   },
   {
     id: "spot-13",
@@ -508,7 +508,7 @@ const products = [
     category: "Acessórios",
     price: 3,
     description: "Companheiro robótico para cenas com Dummy 13.",
-    image: "fotos/acessorios-dummy/Spot-13 2.0.jpg"
+    image: "Fotos/Acessórios Dummy/Spot-13 2.0.jpg"
   },
   {
     id: "military-vest-iotv",
@@ -516,7 +516,7 @@ const products = [
     category: "Acessórios",
     price: 3,
     description: "Colete tático pesado para Dummy 13.",
-    image: "fotos/acessorios-dummy/Military Heavy Bulletproof VestIOTV Dummy 13.jpg"
+    image: "Fotos/Acessórios Dummy/Military Heavy Bulletproof VestIOTV Dummy 13.jpg"
   },
   {
     id: "dummy-chest-armour",
@@ -524,7 +524,7 @@ const products = [
     category: "Acessórios",
     price: 2,
     description: "Peças de armadura para o peito do Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 - Chest Armour Pieces - Fun Choices!.png"
+    image: "Fotos/Acessórios Dummy/Dummy 13 - Chest Armour Pieces - Fun Choices!.png"
   },
   {
     id: "dummy-dirt-bike",
@@ -532,7 +532,7 @@ const products = [
     category: "Acessórios",
     price: 3,
     description: "Moto estilo dirt bike compatível com Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 Dirt Bike.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Dirt Bike.jpg"
   },
   {
     id: "ward-golem-kit",
@@ -540,7 +540,7 @@ const products = [
     category: "Acessórios",
     price: 3,
     description: "Kit de modelo para montar e personalizar.",
-    image: "fotos/acessorios-dummy/Ward Golem - Model Kit.jpg"
+    image: "Fotos/Acessórios Dummy/Ward Golem - Model Kit.jpg"
   },
   {
     id: "dummy-dragon-wings",
@@ -548,7 +548,7 @@ const products = [
     category: "Acessórios",
     price: 2,
     description: "Asas de dragão para customização do Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 Dragon Wings.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Dragon Wings.jpg"
   },
   {
     id: "dummy-jetpack",
@@ -556,7 +556,7 @@ const products = [
     category: "Acessórios",
     price: 1.5,
     description: "Jetpack com foguete para Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 Jetpack with Rocket.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Jetpack with Rocket.jpg"
   },
   {
     id: "dummy-broken-leg-crutches",
@@ -564,7 +564,7 @@ const products = [
     category: "Acessórios",
     price: 0.5,
     description: "Peças de perna quebrada e muletas para cenas.",
-    image: "fotos/acessorios-dummy/Dummy 13 Broken Leg and Crutches.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Broken Leg and Crutches.jpg"
   },
   {
     id: "dummy-narnian-shield",
@@ -572,7 +572,7 @@ const products = [
     category: "Acessórios",
     price: 0.5,
     description: "Escudo para Dummy 13 em estilo fantasia.",
-    image: "fotos/acessorios-dummy/Dummy 13 Narnian Shield.png"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Narnian Shield.png"
   },
   {
     id: "dummy-shoulder-cannon",
@@ -580,7 +580,7 @@ const products = [
     category: "Acessórios",
     price: 0.5,
     description: "Canhão de ombro e metralhadora para Dummy 13.",
-    image: "fotos/acessorios-dummy/shoulder cannon and Gatling gun for dummy 13.jpg"
+    image: "Fotos/Acessórios Dummy/shoulder cannon and Gatling gun for dummy 13.jpg"
   },
   {
     id: "dummy-more-heads",
@@ -588,7 +588,7 @@ const products = [
     category: "Acessórios",
     price: 4,
     description: "Cabeças extras para variar expressões e personagens.",
-    image: "fotos/acessorios-dummy/Dummy 13 - Lots More Heads Again! WITH v1 VERSIONS.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 - Lots More Heads Again! WITH v1 VERSIONS.jpg"
   },
   {
     id: "dummy-arm-blaster",
@@ -596,7 +596,7 @@ const products = [
     category: "Acessórios",
     price: 2,
     description: "Blaster de braço para customização de ação.",
-    image: "fotos/acessorios-dummy/Dummy 13 Arm Blaster!.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Arm Blaster!.jpg"
   },
   {
     id: "dummy-functional-backpack",
@@ -604,7 +604,7 @@ const products = [
     category: "Acessórios",
     price: 2,
     description: "Mochila funcional para personalizar o Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 extra arms backpack.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 extra arms backpack.jpg"
   },
   {
     id: "armor-leg-roller",
@@ -612,7 +612,7 @@ const products = [
     category: "Acessórios",
     price: 4,
     description: "Armadura de perna com visual reforçado para Dummy 13.",
-    image: "fotos/acessorios-dummy/Armor Seriesfor for Dummy 13 (Leg Armor Roller).jpg"
+    image: "Fotos/Acessórios Dummy/Armor Seriesfor for Dummy 13 (Leg Armor Roller).jpg"
   },
   {
     id: "baby-13",
@@ -620,7 +620,7 @@ const products = [
     category: "Dummys",
     price: 2,
     description: "Mini figura em escala Dummy 13.",
-    image: "fotos/acessorios-dummy/Baby 13 - Dummy 13 scale baby - Beta.png"
+    image: "Fotos/Acessórios Dummy/Baby 13 - Dummy 13 scale baby - Beta.png"
   },
   {
     id: "armor-titan-arm",
@@ -628,7 +628,7 @@ const products = [
     category: "Acessórios",
     price: 3,
     description: "Braço Titan para personalizar o Dummy 13.",
-    image: "fotos/acessorios-dummy/Armor Seriesfor for Dummy 13 (TITAN ARM).jpg"
+    image: "Fotos/Acessórios Dummy/Armor Seriesfor for Dummy 13 (TITAN ARM).jpg"
   },
   {
     id: "dummy-mech-wings",
@@ -636,7 +636,7 @@ const products = [
     category: "Acessórios",
     price: 3,
     description: "Asas mecânicas para composições futuristas.",
-    image: "fotos/acessorios-dummy/Dummy 13 Mech Wings.jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Mech Wings.jpg"
   },
   {
     id: "dummy-wings",
@@ -644,7 +644,7 @@ const products = [
     category: "Acessórios",
     price: 4,
     description: "Asas para Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 Wings.png"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Wings.png"
   },
   {
     id: "dummy-flexi-wings",
@@ -652,7 +652,7 @@ const products = [
     category: "Acessórios",
     price: 3,
     description: "Asas flexíveis com base fixa para Dummy 13.",
-    image: "fotos/acessorios-dummy/Dummy 13 Flexi Wings (fixed base).jpg"
+    image: "Fotos/Acessórios Dummy/Dummy 13 Flexi Wings (fixed base).jpg"
   },
   {
     id: "spider-legs-back-armor",
@@ -660,7 +660,7 @@ const products = [
     category: "Acessórios",
     price: 5,
     description: "Armadura traseira com pernas de aranha para Dummy 13.",
-    image: "fotos/acessorios-dummy/Spider Legs Back Armor For Dummy 13.jpg"
+    image: "Fotos/Acessórios Dummy/Spider Legs Back Armor For Dummy 13.jpg"
   },
   {
     id: "dummy-13-version-1",
@@ -668,7 +668,7 @@ const products = [
     category: "Dummys",
     price: 15,
     description: "Boneco articulado com kit de armas incluso.",
-    image: "fotos/dummys/Dummy 13 - version 1.0!.png"
+    image: "Fotos/Dummys/Dummy 13 - version 1.0!.png"
   },
   {
     id: "dummy-weapons-pack-v2",
@@ -676,7 +676,7 @@ const products = [
     category: "Acessórios",
     price: 3,
     description: "Pack de armas incluso grátis enquanto o Dummy 13 Articulado estiver no carrinho.",
-    image: "fotos/acessorios-dummy/Dummy 13 Weapons Pack Version 2.0.png",
+    image: "Fotos/Acessórios Dummy/Dummy 13 Weapons Pack Version 2.0.png",
     hiddenFromCatalog: true,
     freeWithProductId: "dummy-13-version-1"
   },
@@ -686,7 +686,7 @@ const products = [
     category: "Acessórios",
     price: 0.1,
     description: "Botas para personalizar o Dummy 13.",
-    image: "fotos/kit-dummy-soldado/Dummy 13 Boots - V1.0.png"
+    image: "Fotos/Kit Dummy Soldado/Dummy 13 Boots - V1.0.png"
   },
   {
     id: "dummy-gas-mask",
@@ -694,7 +694,7 @@ const products = [
     category: "Acessórios",
     price: 1.5,
     description: "Máscara de gás removível para Dummy 13.",
-    image: "fotos/kit-dummy-soldado/Removable Gas Mask For Dummy 13 (PMK-4).png"
+    image: "Fotos/Kit Dummy Soldado/Removable Gas Mask For Dummy 13 (PMK-4).png"
   },
   {
     id: "robo-kit-soldado",
@@ -702,7 +702,7 @@ const products = [
     category: "Acessórios",
     price: 5,
     description: "Robô para compor cenas com o Kit Soldado Dummy.",
-    image: "fotos/kit-dummy-soldado/Robo.png"
+    image: "Fotos/Kit Dummy Soldado/Robo.png"
   },
   {
     id: "dummy-gun-pack-2",
@@ -710,7 +710,7 @@ const products = [
     category: "Acessórios",
     price: 4,
     description: "Pacote de armas para Dummy 13.",
-    image: "fotos/kit-dummy-soldado/Dummy 13 Gun Pack 2.png"
+    image: "Fotos/Kit Dummy Soldado/Dummy 13 Gun Pack 2.png"
   },
   {
     id: "dummy-tripod-machine-gun",
@@ -718,7 +718,7 @@ const products = [
     category: "Acessórios",
     price: 1.5,
     description: "Metralhadora com tripé para Dummy 13.",
-    image: "fotos/kit-dummy-soldado/Tripod Machine Gun for Dummy 13 A1 mini.png"
+    image: "Fotos/Kit Dummy Soldado/Tripod Machine Gun for Dummy 13 A1 mini.png"
   },
   {
     id: "dummy-alternate-heads",
@@ -726,7 +726,7 @@ const products = [
     category: "Acessórios",
     price: 0.6,
     description: "Cabeças alternativas para variar personagens do Dummy 13.",
-    image: "fotos/kit-dummy-soldado/Dummy 13 Alternate Heads - V1.0.png"
+    image: "Fotos/Kit Dummy Soldado/Dummy 13 Alternate Heads - V1.0.png"
   },
   {
     id: "dummy-drop-holsters",
@@ -734,7 +734,7 @@ const products = [
     category: "Acessórios",
     price: 0.7,
     description: "Coldres para pistola e taser do Dummy 13.",
-    image: "fotos/kit-dummy-soldado/Dummy 13 Drop Holsters for Pistol and Taser.png"
+    image: "Fotos/Kit Dummy Soldado/Dummy 13 Drop Holsters for Pistol and Taser.png"
   },
   {
     id: "lucky-13",
@@ -742,7 +742,7 @@ const products = [
     category: "Dummys",
     price: 15,
     description: "Figura articulada para impressão 3D e personalização.",
-    image: "fotos/dummys/LUCKY 13 Printable Jointed Figure.png"
+    image: "Fotos/Dummys/LUCKY 13 Printable Jointed Figure.png"
   },
   {
     id: "mini-13",
@@ -750,7 +750,7 @@ const products = [
     category: "Dummys",
     price: 8,
     description: "Mini figura com espada, escudo, mochila e boné inclusos.",
-    image: "fotos/dummys/MINI 13 Printable Jointed Figure.png"
+    image: "Fotos/Dummys/MINI 13 Printable Jointed Figure.png"
   },
   {
     id: "kit-dummy-soldado",
@@ -758,17 +758,17 @@ const products = [
     category: "Kit Dummy Soldado",
     price: 27,
     description: "Kit temático de soldado com peças táticas para montar uma composição completa.",
-    image: "fotos/kit-dummy-soldado/Robo.png",
+    image: "Fotos/Kit Dummy Soldado/Robo.png",
     kitImages: [
-      "fotos/kit-dummy-soldado/Dummy 13 Alternate Heads - V1.0.png",
-      "fotos/kit-dummy-soldado/Dummy 13 Armor-Plate Carrier.png",
-      "fotos/kit-dummy-soldado/Dummy 13 Boots - V1.0.png",
-      "fotos/kit-dummy-soldado/Dummy 13 Dirt Bike.png",
-      "fotos/kit-dummy-soldado/Dummy 13 Drop Holsters for Pistol and Taser.png",
-      "fotos/kit-dummy-soldado/Dummy 13 Gun Pack 2.png",
-      "fotos/kit-dummy-soldado/Military Heavy Bulletproof Vest IOTV Dummy 13.png",
-      "fotos/kit-dummy-soldado/Removable Gas Mask For Dummy 13 (PMK-4).png",
-      "fotos/kit-dummy-soldado/Tripod Machine Gun for Dummy 13 A1 mini.png"
+      "Fotos/Kit Dummy Soldado/Dummy 13 Alternate Heads - V1.0.png",
+      "Fotos/Kit Dummy Soldado/Dummy 13 Armor-Plate Carrier.png",
+      "Fotos/Kit Dummy Soldado/Dummy 13 Boots - V1.0.png",
+      "Fotos/Kit Dummy Soldado/Dummy 13 Dirt Bike.png",
+      "Fotos/Kit Dummy Soldado/Dummy 13 Drop Holsters for Pistol and Taser.png",
+      "Fotos/Kit Dummy Soldado/Dummy 13 Gun Pack 2.png",
+      "Fotos/Kit Dummy Soldado/Military Heavy Bulletproof Vest IOTV Dummy 13.png",
+      "Fotos/Kit Dummy Soldado/Removable Gas Mask For Dummy 13 (PMK-4).png",
+      "Fotos/Kit Dummy Soldado/Tripod Machine Gun for Dummy 13 A1 mini.png"
     ],
     calculation: {
       individualTotal: 38.5,
@@ -1383,6 +1383,7 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
 
 
 
