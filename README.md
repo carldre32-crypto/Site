@@ -7,8 +7,8 @@ Site estático em HTML, CSS e JavaScript para catálogo com carrinho de pedidos.
 - `index.html`: estrutura da página, carrinho e formulário.
 - `style.css`: visual, responsividade e animações.
 - `script.js`: produtos, carrinho, envio do pedido e link do WhatsApp.
-- `Fotos/`: imagens usadas nos produtos.
-- `APEX 3D IMPRESSÕES.png`: logo usada no cabeçalho e rodapé.
+- `fotos/`: imagens usadas nos produtos.
+- `logo-apex-3d.png`: logo usada no cabeçalho e rodapé.
 
 ## Onde editar o e-mail e WhatsApp
 
@@ -37,7 +37,7 @@ Cada produto segue este formato:
   category: "Dummy",
   price: 79.9,
   description: "Descrição curta do produto.",
-  image: "Fotos/Pasta/Nome da imagem.jpg"
+  image: "fotos/Pasta/Nome da imagem.jpg"
 }
 ```
 
@@ -83,8 +83,8 @@ Importante: o FormSubmit não envia quando o site é aberto direto pelo arquivo 
    - `style.css`
    - `script.js`
    - `README.md`
-   - `Fotos/`
-   - `APEX 3D IMPRESSÕES.png`
+   - `fotos/`
+   - `logo-apex-3d.png`
 4. No GitHub, abra `Settings`.
 5. Entre em `Pages`.
 6. Em `Build and deployment`, escolha:

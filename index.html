@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Apex 3D Impressões">
-      <img src="APEX 3D IMPRESSÕES.png" alt="Logo Apex 3D Impressões">
+      <img src="logo-apex-3d.png" alt="Logo Apex 3D Impressões">
       <span>Apex 3D</span>
     </a>
 
@@ -34,13 +34,13 @@
     <section class="hero" id="inicio">
       <div class="hero-media" aria-hidden="true">
         <div class="hero-panel hero-panel-one">
-          <img src="Fotos/Dummys/Dummy 13 - version 1.0!.png" alt="">
+          <img src="fotos/dummys/Dummy 13 - version 1.0!.png" alt="">
         </div>
         <div class="hero-panel hero-panel-two">
-          <img src="Fotos/Utensílios e Decoração/Minecraft Movie TNT PopCorn Bucket.png" alt="">
+          <img src="fotos/utensilios-decoracao/Minecraft Movie TNT PopCorn Bucket.png" alt="">
         </div>
         <div class="hero-panel hero-panel-three">
-          <img src="Fotos/Utensílios e Decoração/Busto de Pantera Geométrica Arte Low-Poly Moderna.jpg" alt="">
+          <img src="fotos/utensilios-decoracao/Busto de Pantera Geométrica Arte Low-Poly Moderna.jpg" alt="">
         </div>
       </div>
       <div class="hero-content reveal">
@@ -91,6 +91,14 @@
           <p class="eyebrow">Catálogo</p>
           <h2>Produtos em destaque</h2>
         </div>
+        <div class="catalog-controls">
+          <label class="search-box" aria-label="Pesquisar no catálogo">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M10.8 4.2a6.6 6.6 0 1 1 0 13.2 6.6 6.6 0 0 1 0-13.2Zm0 2a4.6 4.6 0 1 0 0 9.2 4.6 4.6 0 0 0 0-9.2Zm5.1 9.2 4 4-1.4 1.4-4-4 1.4-1.4Z"/>
+            </svg>
+            <input type="search" placeholder="Pesquisar produto ou tag" autocomplete="off" data-product-search>
+          </label>
+
         <div class="filter-tabs" role="list" aria-label="Filtros do catálogo">
           <button class="filter-btn is-active" type="button" data-filter="Todos">Todos</button>
           <button class="filter-btn" type="button" data-filter="Geek">Geek</button>
@@ -100,6 +108,7 @@
           <button class="filter-btn" type="button" data-filter="Dummys">Dummys</button>
           <button class="filter-btn" type="button" data-filter="Acessórios">Acessórios</button>
           <button class="filter-btn" type="button" data-filter="Kit Dummy Soldado">Kit Dummy Soldado</button>
+        </div>
         </div>
       </div>
 
@@ -161,7 +170,7 @@
           <span>Total</span>
           <strong data-cart-total>R$ 0,00</strong>
         </div>
-        <small>Pagamento tratado depois pelo WhatsApp via Pix.</small>
+        <small>Produtos sob encomenda. Para saber o processo do pedido, prazo e próximos passos, contate no WhatsApp.</small>
       </div>
 
       <form class="checkout-form" data-checkout-form method="POST">
@@ -169,6 +178,8 @@
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_subject" value="Novo pedido - Apex 3D">
         <input type="hidden" name="Resumo do pedido" data-order-summary>
+
+        <p class="checkout-note"><strong>Produto sob encomenda:</strong> depois de enviar, fale no WhatsApp para saber o processo do pedido, prazo de produção e combinação final.</p>
 
         <label>
           Nome do cliente
@@ -197,7 +208,7 @@
 
       <div class="success-message" data-success-message hidden>
         <h3>Pedido enviado com sucesso!</h3>
-        <p>Recebemos os dados do carrinho. Agora chame a Apex 3D no WhatsApp para finalizar o pagamento por Pix.</p>
+        <p>Recebemos os dados do carrinho. O produto é sob encomenda; chame a Apex 3D no WhatsApp para saber o processo do pedido e combinar os próximos passos.</p>
         <a class="whatsapp-button" href="#" target="_blank" rel="noopener" data-whatsapp-link>Chamar no WhatsApp</a>
       </div>
     </div>
@@ -205,10 +216,10 @@
 
   <footer class="site-footer" id="contato">
     <div>
-      <img src="APEX 3D IMPRESSÕES.png" alt="Apex 3D Impressões">
+      <img src="logo-apex-3d.png" alt="Apex 3D Impressões">
       <p>Apex 3D Impressões</p>
     </div>
-    <p>Pedidos organizados pelo site. Pagamento e produção combinados pelo WhatsApp via Pix.</p>
+    <p>Pedidos sob encomenda organizados pelo site. Processo, prazo, pagamento e produção combinados pelo WhatsApp.</p>
   </footer>
 
   <a class="floating-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Chamar a Apex 3D no WhatsApp" data-floating-whatsapp>
@@ -218,3 +229,6 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
+
