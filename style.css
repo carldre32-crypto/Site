@@ -837,15 +837,6 @@ h2 {
   font-size: 1.35rem;
 }
 
-.order-counter {
-  border-top: 1px solid var(--line);
-  padding-top: 10px;
-}
-
-.order-counter strong {
-  color: #8dffb8;
-}
-
 .cart-summary small {
   color: var(--muted);
   line-height: 1.45;
@@ -996,12 +987,6 @@ h2 {
 .success-message p {
   color: var(--text);
   line-height: 1.5;
-}
-
-.success-order {
-  color: #8dffb8 !important;
-  font-weight: 900;
-  margin-bottom: 8px;
 }
 
 .whatsapp-button {
@@ -1346,7 +1331,6 @@ h2 {
     width: 62px;
   }
 }
-
 
 
 
