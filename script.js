@@ -937,18 +937,22 @@ const cartPanel = document.querySelector("[data-cart-panel]");
 const cartItems = document.querySelector("[data-cart-items]");
 const cartCount = document.querySelector("[data-cart-count]");
 const cartTotal = document.querySelector("[data-cart-total]");
+const orderCounter = document.querySelector("[data-order-counter]");
 const checkoutForm = document.querySelector("[data-checkout-form]");
 const customForm = document.querySelector("[data-custom-form]");
 const orderSummaryInput = document.querySelector("[data-order-summary]");
 const orderStatus = document.querySelector("[data-order-status]");
 const customStatus = document.querySelector("[data-custom-status]");
 const successMessage = document.querySelector("[data-success-message]");
+const successOrder = document.querySelector("[data-success-order]");
 const whatsappLink = document.querySelector("[data-whatsapp-link]");
 const customWhatsappLink = document.querySelector("[data-whatsapp-link-custom]");
 const floatingWhatsapp = document.querySelector("[data-floating-whatsapp]");
 const filterButtons = document.querySelectorAll("[data-filter]");
 const searchInput = document.querySelector("[data-product-search]");
 let selectedCategory = "Todos";
+let fallbackOrderCount = 0;
+const ORDER_COUNTER_KEY = "apex3d-order-count";
 
 const money = new Intl.NumberFormat("pt-BR", {
   style: "currency",
@@ -957,6 +961,37 @@ const money = new Intl.NumberFormat("pt-BR", {
 
 function formatMoney(value) {
   return money.format(value);
+}
+
+function formatOrderNumber(orderNumber) {
+  return `#${String(orderNumber).padStart(3, "0")}`;
+}
+
+function getLastOrderNumber() {
+  try {
+    const savedValue = window.localStorage.getItem(ORDER_COUNTER_KEY);
+    const savedNumber = Number(savedValue);
+    return Number.isFinite(savedNumber) && savedNumber > 0 ? savedNumber : fallbackOrderCount;
+  } catch (error) {
+    return fallbackOrderCount;
+  }
+}
+
+function getNextOrderNumber() {
+  return getLastOrderNumber() + 1;
+}
+
+function saveLastOrderNumber(orderNumber) {
+  fallbackOrderCount = orderNumber;
+  try {
+    window.localStorage.setItem(ORDER_COUNTER_KEY, String(orderNumber));
+  } catch (error) {
+    // O contador continua funcionando em memória quando o navegador bloqueia localStorage.
+  }
+}
+
+function renderOrderCounter() {
+  if (orderCounter) orderCounter.textContent = formatOrderNumber(getNextOrderNumber());
 }
 
 function getCartItems() {
@@ -1070,6 +1105,7 @@ function renderCart() {
 
   cartCount.textContent = totalQuantity;
   cartTotal.textContent = `${formatMoney(getCartTotal())}${consultationText}`;
+  renderOrderCounter();
 
   if (!items.length) {
     cartItems.innerHTML = '<p class="empty-cart">Seu carrinho está vazio. Escolha um produto no catálogo para começar o pedido.</p>';
@@ -1174,7 +1210,7 @@ function closeCart() {
   document.body.classList.remove("is-cart-open");
 }
 
-function buildOrderSummary(formData) {
+function buildOrderSummary(formData, orderNumber) {
   const items = getCartItems();
   const lines = items.map(({ product, quantity }) => {
     const subtotal = getProductPrice(product) * quantity;
@@ -1188,6 +1224,7 @@ function buildOrderSummary(formData) {
 
   return [
     "Pedido Apex 3D",
+    `Número do pedido: ${formatOrderNumber(orderNumber)}`,
     "",
     ...lines,
     "",
@@ -1206,8 +1243,8 @@ function buildOrderSummary(formData) {
   ].join("\n");
 }
 
-function buildWhatsAppUrl(customerName) {
-  const message = `Olá, Apex 3D! Acabei de fazer um pedido no site em nome de ${customerName}. Quero saber o processo do pedido sob encomenda e finalizar pelo WhatsApp.`;
+function buildWhatsAppUrl(customerName, orderNumber) {
+  const message = `Olá, Apex 3D! Acabei de fazer o pedido ${formatOrderNumber(orderNumber)} no site em nome de ${customerName}. Quero saber o processo do pedido sob encomenda e finalizar pelo WhatsApp.`;
   return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
@@ -1216,8 +1253,9 @@ function buildCustomWhatsAppUrl() {
   return `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
-function showSuccess(customerName) {
-  whatsappLink.href = buildWhatsAppUrl(customerName);
+function showSuccess(customerName, orderNumber) {
+  whatsappLink.href = buildWhatsAppUrl(customerName, orderNumber);
+  if (successOrder) successOrder.textContent = `Número do pedido: ${formatOrderNumber(orderNumber)}`;
   successMessage.hidden = false;
   orderStatus.textContent = "";
   successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -1293,7 +1331,8 @@ checkoutForm.addEventListener("submit", async (event) => {
     return;
   }
 
-  const orderSummary = buildOrderSummary(formData);
+  const orderNumber = getNextOrderNumber();
+  const orderSummary = buildOrderSummary(formData, orderNumber);
   orderSummaryInput.value = orderSummary;
   formData.set("Resumo do pedido", orderSummary);
   formData.set("_replyto", formData.get("Email"));
@@ -1302,7 +1341,9 @@ checkoutForm.addEventListener("submit", async (event) => {
   // Enquanto o e-mail estiver como exemplo, o site permite testar o fluxo sem enviar pedido real.
   if (CONFIG.orderEmail === "seu-email@exemplo.com") {
     console.info(orderSummary);
-    showSuccess(customerName);
+    saveLastOrderNumber(orderNumber);
+    renderOrderCounter();
+    showSuccess(customerName, orderNumber);
     return;
   }
 
@@ -1325,7 +1366,9 @@ checkoutForm.addEventListener("submit", async (event) => {
       throw new Error(result.message || "O FormSubmit recusou o envio.");
     }
 
-    showSuccess(customerName);
+    saveLastOrderNumber(orderNumber);
+    renderOrderCounter();
+    showSuccess(customerName, orderNumber);
     checkoutForm.reset();
   } catch (error) {
     showOrderError(getFriendlyFormSubmitError(error.message));
@@ -1379,10 +1422,12 @@ customForm.addEventListener("submit", async (event) => {
 
 renderProducts();
 renderCart();
+renderOrderCounter();
 
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
 
 
 
