@@ -31,6 +31,24 @@ const products = [
     image: "Fotos/Utensílios e Decoração/Caixa organizadora de cosméticos.jpg"
   },
   {
+    id: "caixa-organizadora-cosmeticos-10cm",
+    name: "Caixa organizadora de cosméticos - 10 cm",
+    category: "Utensílios",
+    price: 25,
+    description: "Versão de 10 cm da caixa organizadora de cosméticos.",
+    image: "Fotos/Utensílios e Decoração/Caixa organizadora de cosméticos.jpg",
+    hiddenFromCatalog: true
+  },
+  {
+    id: "caixa-organizadora-cosmeticos-20cm",
+    name: "Caixa organizadora de cosméticos - 20 cm",
+    category: "Utensílios",
+    price: 35,
+    description: "Versão de 20 cm da caixa organizadora de cosméticos.",
+    image: "Fotos/Utensílios e Decoração/Caixa organizadora de cosméticos.jpg",
+    hiddenFromCatalog: true
+  },
+  {
     id: "hexa-link-prateleiras",
     name: "Sistema Hexa-Link de prateleiras",
     category: "Utensílios",
@@ -783,7 +801,11 @@ const productTextOverrides = {
   "minecraft-movie-tnt-popcorn-bucket": { name: "Balde TNT Minecraft" },
   "caixa-organizadora-cosmeticos": {
     description: "Organizador funcional para bancada, penteadeira ou mesa de trabalho. Disponível em 10 cm e 20 cm no mesmo anúncio.",
-    priceLabel: "10 cm: R$ 25,00 | 20 cm: R$ 25,00"
+    priceLabel: "10 cm: R$ 25,00 | 20 cm: R$ 35,00",
+    variantOptions: [
+      { productId: "caixa-organizadora-cosmeticos-10cm", label: "Adicionar 10 cm", priceLabel: "R$ 25,00" },
+      { productId: "caixa-organizadora-cosmeticos-20cm", label: "Adicionar 20 cm", priceLabel: "R$ 35,00" }
+    ]
   },
   "balde-tubo-teletransporte": { name: "Balde Tubo Verde" },
   "hexa-link-prateleiras": { name: "Prateleira Hexa-Link" },
@@ -1023,9 +1045,18 @@ function productCardTemplate(product) {
             <span class="kit-gallery-count" data-kit-count>1 / ${product.kitImages.length + 1}</span>
           </div>
         ` : ""}
-        <div class="product-footer">
+        <div class="product-footer${product.variantOptions ? " product-footer-variants" : ""}">
           <span class="price">${getProductPriceLabel(product)}</span>
-          <button class="product-button" type="button" data-add-product="${product.id}">Adicionar</button>
+          ${product.variantOptions ? `
+            <div class="variant-actions">
+              ${product.variantOptions.map((variant) => `
+                <button class="product-button variant-button" type="button" data-add-product="${variant.productId}">
+                  <span>${variant.label}</span>
+                  <strong>${variant.priceLabel}</strong>
+                </button>
+              `).join("")}
+            </div>
+          ` : `<button class="product-button" type="button" data-add-product="${product.id}">Adicionar</button>`}
         </div>
       </div>
     </article>
@@ -1388,6 +1419,8 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
+
 
 
 

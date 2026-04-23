@@ -580,6 +580,31 @@ h2 {
   margin-top: auto;
 }
 
+.product-footer-variants {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.variant-actions {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+}
+
+.variant-button {
+  align-items: flex-start;
+  display: grid;
+  gap: 4px;
+  justify-items: start;
+  min-height: 58px;
+  width: 100%;
+}
+
+.variant-button strong {
+  font-size: 0.92rem;
+}
+
 .kit-calculation {
   background: rgba(255, 211, 24, 0.08);
   border: 1px solid rgba(255, 211, 24, 0.24);
@@ -1224,6 +1249,10 @@ h2 {
     flex-direction: column;
   }
 
+  .variant-actions {
+    grid-template-columns: 1fr;
+  }
+
   .product-button,
   .price {
     width: 100%;
@@ -1331,6 +1360,7 @@ h2 {
     width: 62px;
   }
 }
+
 
 
 
