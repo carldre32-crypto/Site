@@ -26,7 +26,7 @@ const products = [
     id: "caixa-organizadora-cosmeticos",
     name: "Caixa organizadora de cosméticos",
     category: "Utensílios",
-    price: 35,
+    price: 25,
     description: "Organizador funcional para bancada, penteadeira ou mesa de trabalho.",
     image: "Fotos/Utensílios e Decoração/Caixa organizadora de cosméticos.jpg"
   },
@@ -781,6 +781,10 @@ const products = [
 
 const productTextOverrides = {
   "minecraft-movie-tnt-popcorn-bucket": { name: "Balde TNT Minecraft" },
+  "caixa-organizadora-cosmeticos": {
+    description: "Organizador funcional para bancada, penteadeira ou mesa de trabalho. Disponível em 10 cm e 20 cm no mesmo anúncio.",
+    priceLabel: "10 cm: R$ 25,00 | 20 cm: R$ 25,00"
+  },
   "balde-tubo-teletransporte": { name: "Balde Tubo Verde" },
   "hexa-link-prateleiras": { name: "Prateleira Hexa-Link" },
   "suporte-controle-cubone": { name: "Suporte Cubone" },
@@ -974,7 +978,8 @@ function getProductPrice(product) {
 
 function getProductPriceLabel(product) {
   if (isProductFreeInCart(product)) return "R$ 0,00 com Dummy 13";
-  return typeof product.price === "number" ? formatMoney(product.price) : product.priceLabel || "Sob consulta";
+  if (product.priceLabel) return product.priceLabel;
+  return typeof product.price === "number" ? formatMoney(product.price) : "Sob consulta";
 }
 
 function hasConsultationItems() {
@@ -1383,6 +1388,7 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
 
 
 
