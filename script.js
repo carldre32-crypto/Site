@@ -297,6 +297,78 @@ const products = [
     image: "Fotos/Utensílios e Decoração/Vase with Roses and Stems - Flowers Bouquet.png"
   },
   {
+    id: "super-mario-question-block-box",
+    name: "Super Mario Question Block Box",
+    category: "Geek",
+    price: 10,
+    description: "Caixa decorativa inspirada no bloco de interrogação para doces, mesa ou setup geek.",
+    image: "Fotos/Utensílios e Decoração/Super Mario Question Block Box.png"
+  },
+  {
+    id: "cosmetic-storage-box",
+    name: "Cosmetic storage box",
+    category: "Utensílios",
+    price: 40,
+    description: "Caixa organizadora para maquiagem, acessórios e itens de bancada.",
+    image: "Fotos/Utensílios e Decoração/Cosmetic storage box.png"
+  },
+  {
+    id: "wise-owl-desk-buddy",
+    name: "Wise Owl Desk Buddy",
+    category: "Decoração",
+    price: 25,
+    description: "Coruja decorativa para mesa, estante ou cantinho de trabalho.",
+    image: "Fotos/Utensílios e Decoração/Wise Owl Desk Buddy.png"
+  },
+  {
+    id: "rustic-farmhouse-chicken-hen-candy-dish-bowl",
+    name: "Rustic Farmhouse Chicken Hen Candy Dish Bowl",
+    category: "Decoração",
+    price: 30,
+    description: "Bowl decorativo em estilo rústico para doces, mesa posta ou cozinha.",
+    image: "Fotos/Utensílios e Decoração/Rustic Farmhouse Chicken Hen Candy Dish Bowl.png"
+  },
+  {
+    id: "majestic-swan-kitchen-organizer",
+    name: "Majestic Swan Kitchen Organizer & Utensil Holder",
+    category: "Utensílios",
+    price: 35,
+    description: "Organizador e porta-utensílios com visual de cisne para cozinha ou bancada.",
+    image: "Fotos/Utensílios e Decoração/Majestic Swan Kitchen Organizer & Utensil Holder.png"
+  },
+  {
+    id: "japandi-vase-trio",
+    name: "Japandi Vase Trio",
+    category: "Decoração",
+    price: 12,
+    description: "Conjunto de vasos com estética japandi para decoração minimalista.",
+    image: "Fotos/Utensílios e Decoração/Japandi Vase Trio.png"
+  },
+  {
+    id: "melt-pencil-holder",
+    name: "Melt - pencil holder",
+    category: "Utensílios",
+    price: 15,
+    description: "Porta-lápis moderno para escritório, estudos ou bancada criativa.",
+    image: "Fotos/Utensílios e Decoração/Melt - pencil holder.png"
+  },
+  {
+    id: "felicia-vase-botany-chic",
+    name: "The Felicia Vase - Botany Chic Creation - Decor",
+    category: "Decoração",
+    price: 25,
+    description: "Vaso decorativo com estilo botânico para compor estantes, mesas e aparadores.",
+    image: "Fotos/Utensílios e Decoração/The Felicia Vase - Botany Chic Creation - Decor.png"
+  },
+  {
+    id: "whale-9cm",
+    name: "Whale",
+    category: "Decoração",
+    price: 15,
+    description: "Baleia decorativa de 9 cm para mesa, nicho ou presente criativo.",
+    image: "Fotos/Utensílios e Decoração/Whale.png"
+  },
+  {
     id: "balde-interrogacao",
     name: "Balde Bloco Interrogação",
     category: "Geek",
@@ -1419,6 +1491,8 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
+
 
 
 
