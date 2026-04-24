@@ -1468,56 +1468,66 @@ h2 {
   .product-card {
     align-items: stretch;
     display: grid;
-    grid-template-columns: minmax(112px, 34vw) minmax(0, 1fr);
+    grid-template-columns: minmax(98px, 30vw) minmax(0, 1fr);
+    min-height: 164px;
   }
 
   .product-image {
     aspect-ratio: auto;
     height: 100%;
-    min-height: 100%;
+    min-height: 164px;
   }
 
   .product-image img {
     height: 100%;
+    object-position: center;
   }
 
   .product-info {
-    gap: 12px;
+    gap: 10px;
     min-width: 0;
-    padding: 14px;
+    padding: 12px;
   }
 
   .product-info h3 {
-    font-size: 1.04rem;
+    font-size: 1rem;
   }
 
   .product-info p {
     display: -webkit-box;
+    line-height: 1.45;
     overflow: hidden;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
   }
 
   .product-tags {
-    gap: 6px;
+    gap: 5px;
   }
 
   .product-tags span {
-    font-size: 0.68rem;
-    padding: 7px 8px;
+    font-size: 0.66rem;
+    padding: 6px 7px;
   }
 
   .product-footer {
-    gap: 12px;
+    gap: 10px;
   }
 
   .variant-actions {
     gap: 8px;
   }
 
-  .product-button,
   .price {
+    font-size: 1.02rem;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .product-button {
+    min-height: 44px;
     min-width: 0;
     width: 100%;
   }
 }
+
