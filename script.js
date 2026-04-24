@@ -596,7 +596,7 @@ const products = [
     id: "spot-13",
     name: "Spot-13 2.0",
     category: "Acessórios",
-    price: 3,
+    price: 5,
     description: "Companheiro robótico para cenas com Dummy 13.",
     image: "Fotos/Acessórios Dummy/Spot-13 2.0.jpg"
   },
@@ -787,14 +787,6 @@ const products = [
     image: "Fotos/Kit Dummy Soldado/Removable Gas Mask For Dummy 13 (PMK-4).png"
   },
   {
-    id: "robo-kit-soldado",
-    name: "Robô do Kit",
-    category: "Acessórios",
-    price: 5,
-    description: "Robô para compor cenas com o Kit Soldado Dummy.",
-    image: "Fotos/Kit Dummy Soldado/Robo.png"
-  },
-  {
     id: "dummy-gun-pack-2",
     name: "Pack de Armas 2",
     category: "Acessórios",
@@ -953,7 +945,6 @@ const productTextOverrides = {
   "dummy-weapons-pack-v2": { name: "Kit de Armas Dummy" },
   "dummy-boots-v1": { name: "Botas Dummy 13" },
   "dummy-gas-mask": { name: "Máscara de Gás" },
-  "robo-kit-soldado": { name: "Robô do Kit" },
   "dummy-gun-pack-2": { name: "Pack de Armas 2" },
   "dummy-tripod-machine-gun": { name: "Metralhadora Tripé" },
   "dummy-alternate-heads": { name: "Cabeças Alternativas" },
@@ -1491,6 +1482,9 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
+
+
 
 
 
