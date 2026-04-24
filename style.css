@@ -1464,3 +1464,60 @@ h2 {
 
 
 
+@media (max-width: 520px) {
+  .product-card {
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: minmax(112px, 34vw) minmax(0, 1fr);
+  }
+
+  .product-image {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .product-image img {
+    height: 100%;
+  }
+
+  .product-info {
+    gap: 12px;
+    min-width: 0;
+    padding: 14px;
+  }
+
+  .product-info h3 {
+    font-size: 1.04rem;
+  }
+
+  .product-info p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .product-tags {
+    gap: 6px;
+  }
+
+  .product-tags span {
+    font-size: 0.68rem;
+    padding: 7px 8px;
+  }
+
+  .product-footer {
+    gap: 12px;
+  }
+
+  .variant-actions {
+    gap: 8px;
+  }
+
+  .product-button,
+  .price {
+    min-width: 0;
+    width: 100%;
+  }
+}
