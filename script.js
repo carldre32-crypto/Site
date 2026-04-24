@@ -917,7 +917,7 @@ const productTextOverrides = {
   "dummy-power-claw": { name: "Garra de Combate" },
   "dummy-spider-walker": { name: "Pernas Mecânicas" },
   "dummy-lightsaber": { name: "Sabre de Luz" },
-  "dummy-k9-compilation": { name: "Kit K9" },
+  "dummy-k9-compilation": { name: "K9" },
   "dummy-atv-quad": { name: "Quadriciclo Dummy" },
   "tesla-optimus-dummy": { name: "Robô Optimus" },
   "dummy-armor-plate-carrier": { name: "Colete Porta-placa" },
@@ -925,7 +925,7 @@ const productTextOverrides = {
   "military-vest-iotv": { name: "Colete Tático" },
   "dummy-chest-armour": { name: "Armadura de Peito" },
   "dummy-dirt-bike": { name: "Moto Off-road" },
-  "ward-golem-kit": { name: "Kit Golem" },
+  "ward-golem-kit": { name: "Golem" },
   "dummy-dragon-wings": { name: "Asas de Dragão" },
   "dummy-jetpack": { name: "Jetpack" },
   "dummy-broken-leg-crutches": { name: "Muletas e Perna" },
@@ -942,7 +942,7 @@ const productTextOverrides = {
   "dummy-flexi-wings": { name: "Asas Flexíveis" },
   "spider-legs-back-armor": { name: "Pernas de Aranha" },
   "dummy-13-version-1": { name: "Dummy 13 Articulado" },
-  "dummy-weapons-pack-v2": { name: "Kit de Armas Dummy" },
+  "dummy-weapons-pack-v2": { name: "Armas Dummy" },
   "dummy-boots-v1": { name: "Botas Dummy 13" },
   "dummy-gas-mask": { name: "Máscara de Gás" },
   "dummy-gun-pack-2": { name: "Pack de Armas 2" },
@@ -1482,6 +1482,7 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
 
 
 
