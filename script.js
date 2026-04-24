@@ -753,6 +753,14 @@ const products = [
     image: "Fotos/Acessórios Dummy/Spider Legs Back Armor For Dummy 13.jpg"
   },
   {
+    id: "origin-zero-mecha",
+    name: "Origin-Zero Mecha",
+    category: "Acessórios",
+    price: 5,
+    description: "Mecha articulado para composições com Dummy 13 e cenas futuristas.",
+    image: "Fotos/Acessórios Dummy/Origin-Zero Mecha.png"
+  },
+  {
     id: "dummy-13-version-1",
     name: "Dummy 13 - version 1.0",
     category: "Dummys",
@@ -1482,6 +1490,7 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
 
 
 
