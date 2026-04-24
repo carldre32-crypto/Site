@@ -244,7 +244,7 @@ const products = [
     id: "lego-flowers",
     name: "LEGO Flowers",
     category: "Decoração",
-    price: 15,
+    price: 20,
     description: "Flores decorativas inspiradas em peças montáveis.",
     image: "Fotos/Utensílios e Decoração/LEGO Flowers.png"
   },
@@ -1482,6 +1482,10 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
+
+
+
 
 
 
