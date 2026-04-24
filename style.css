@@ -1470,16 +1470,19 @@ h2 {
 
 @media (max-width: 520px) {
   .product-card {
-    align-items: stretch;
+    align-items: start;
     display: grid;
-    grid-template-columns: minmax(88px, 28vw) minmax(0, 1fr);
-    min-height: 148px;
+    grid-template-columns: 84px minmax(0, 1fr);
+    min-height: 0;
   }
 
   .product-image {
-    aspect-ratio: auto;
-    height: 100%;
-    min-height: 148px;
+    align-self: start;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin: 10px 0 10px 10px;
+    min-height: 0;
+    width: 84px;
   }
 
   .product-image img {
@@ -1537,5 +1540,6 @@ h2 {
     width: 100%;
   }
 }
+
 
 
