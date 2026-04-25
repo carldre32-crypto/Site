@@ -369,12 +369,40 @@ const products = [
     description: "Baleia decorativa de 9 cm para mesa, nicho ou presente criativo.",
     image: "Fotos/Utensílios e Decoração/Whale.png"
   },
+  {"id":"batman-batarang","name":"BATMAN - BATARANG","category":"Geek","price":6,"description":"Batarang decorativo inspirado no Batman para coleção, cosplay leve ou decoração geek.","image":"Fotos/Utensílios e Decoração/BATMAN - BATARANG.png"},
+  {"id":"valorant-recon-butterfly-knife","name":"Valorant Recon Butterfly Knife","category":"Geek","price":12,"description":"Faca butterfly decorativa inspirada em Valorant para coleção ou setup gamer.","image":"Fotos/Utensílios e Decoração/Valorant Recon Butterfly Knife.png"},
+  {"id":"minecraft-custom-name-pen-holder","name":"Mine-Craft Your Name: Custom Name Pen Holder","category":"Geek","priceLabel":"Customizado","description":"Porta-canetas personalizado com nome no tema Minecraft. Chame no WhatsApp para combinar nome, tamanho e valor.","image":"Fotos/Utensílios e Decoração/Mine-Craft Your Name Custom Name Pen Holder.png"},
+  {"id":"resident-evil-matilda","name":"Resident Evil 4 - VP70M Matilda","category":"Geek","price":35,"description":"Peça decorativa inspirada na Matilda de Resident Evil 4 para coleção ou cosplay leve.","image":"Fotos/Utensílios e Decoração/Resident Evil 4 - vp70m - Matilda - matilda.png"},
+  {"id":"valorant-kuronami-knife","name":"Valorant Kuronami Knife","category":"Geek","price":25,"description":"Faca decorativa inspirada em Valorant para setup gamer, coleção ou presente.","image":"Fotos/Utensílios e Decoração/Valorant Kuronami Knife.png"},
+  {"id":"charmander-chibi","name":"Charmander Chibi","category":"Geek","price":15,"description":"Miniatura chibi do Charmander para mesa, estante ou presente geek.","image":"Fotos/Utensílios e Decoração/Charmander Chibi.png"},
+  {"id":"mudkip-pokemon","name":"Mudkip Pokemon","category":"Geek","price":18,"description":"Miniatura do Mudkip para coleção Pokémon, mesa ou estante.","image":"Fotos/Utensílios e Decoração/Mudkip Pokemon - NO AMS Multipart + AMS.png"},
+  {"id":"hulk-multipart","name":"HULK","category":"Geek","price":45,"description":"Figura decorativa do Hulk em multipart multicolor para coleção ou presente.","image":"Fotos/Utensílios e Decoração/HULK  NO AMS - MULTIPART MULTICOLOR.png"},
+  {"id":"snorlax-multipart","name":"Snorlax","category":"Geek","price":60,"description":"Figura decorativa do Snorlax para coleção Pokémon, mesa ou estante.","image":"Fotos/Utensílios e Decoração/Snorlax Multipart NO AMS.png"},
+  {"id":"mew-chibi","name":"Mew Chibi","category":"Geek","price":15,"description":"Miniatura chibi do Mew para coleção Pokémon ou presente geek.","image":"Fotos/Utensílios e Decoração/Mew Chibi.png"},
+  {"id":"kuromi","name":"Kuromi","category":"Geek","price":25,"description":"Peça decorativa da Kuromi para mesa, estante ou presente.","image":"Fotos/Utensílios e Decoração/Kuromi.png"},
+  {"id":"eevee","name":"Eevee","category":"Geek","price":35,"description":"Figura decorativa do Eevee para coleção Pokémon ou presente geek.","image":"Fotos/Utensílios e Decoração/Eevee.png"},
+  {"id":"pen-holder-paper-bag","name":"Pen Holder - Paper Bag","category":"Utensílios","price":15,"description":"Porta-lápis em formato de saco de papel para mesa de trabalho ou estudos.","image":"Fotos/Utensílios e Decoração/Pen Holder - Paper Bag.png"},
+  {"id":"little-fat-cat","name":"Little Fat Cat","category":"Decoração","price":5,"description":"Mini gato decorativo de 2,5 cm para mesa, nicho ou presente pequeno.","image":"Fotos/Utensílios e Decoração/Little Fat Cat.png"},
+  {"id":"halloween-cat-mini-figures","name":"Halloween Cat Mini Figures","category":"Decoração","price":5,"description":"Mini figura de gato Halloween com 2,6 cm para decoração temática.","image":"Fotos/Utensílios e Decoração/Halloween Cat Mini Figures – Set of 6.png"},
+  {"id":"fisherman-incense-holder","name":"Fisherman","category":"Decoração","price":18,"description":"Peça decorativa de pescador com 10 cm, ideal para mesa, nicho ou porta-incenso.","image":"Fotos/Utensílios e Decoração/Fisherman - Incense stick holde.png"},
+  {"id":"bowser-super-mario","name":"BOWSER SUPER MARIO","category":"Geek","price":120,"description":"Figura decorativa do Bowser com 21 cm para coleção Super Mario.","image":"Fotos/Utensílios e Decoração/BOWSER SUPER MARIO.png"},
+  {"id":"yoshi-super-mario","name":"Yoshi","category":"Geek","price":25,"description":"Figura decorativa do Yoshi com 13 cm para coleção Super Mario.","image":"Fotos/Utensílios e Decoração/Yoshi Oeuf multipart.png"},
+  {"id":"dire-wolf","name":"Dire Wolf","category":"Decoração","price":25,"description":"Lobo decorativo com 12 cm para mesa, estante ou presente.","image":"Fotos/Utensílios e Decoração/Dire Wolf.png"},
+  {"id":"luma-star","name":"Luma Star","category":"Geek","price":25,"description":"Estrela Luma com 12 cm para coleção Super Mario ou decoração geek.","image":"Fotos/Utensílios e Decoração/Luma Star.png"},
+  {"id":"roku-remote-holder","name":"Roku Remote Holder","category":"Utensílios","price":7,"description":"Suporte para controle Roku ou controles pequenos de mesa e sala.","image":"Fotos/Utensílios e Decoração/Roku Remote Holder.png"},
+  {"id":"tech-station-desk-organizer","name":"Tech-Station Desk Organizer","category":"Utensílios","price":30,"description":"Organizador de mesa com 7,5 cm para acessórios, cabos e itens de setup.","image":"Fotos/Utensílios e Decoração/Tech-Station Desk Organizer.png"},
+  {"id":"espeon","name":"Espeon","category":"Geek","price":50,"description":"Figura decorativa do Espeon com 25 cm para coleção Pokémon.","image":"Fotos/Utensílios e Decoração/Espeon.png"},
+  {"id":"low-poly-dinosaur-skull","name":"Low Poly Dinosaur Skull","category":"Decoração","price":30,"description":"Crânio de dinossauro low-poly com 8 cm para decoração geek ou científica.","image":"Fotos/Utensílios e Decoração/Low Poly Dinosaur Skull.png"},
+  {"id":"giant-lego-droid-blaster","name":"Giant LEGO Droid Blaster","category":"Geek","price":35,"description":"Blaster estilo LEGO Droid com 18 cm de comprimento para coleção ou cosplay leve.","image":"Fotos/Utensílios e Decoração/Giant LEGO Droid Blaster.png"},
+  {"id":"umbreon","name":"Umbreon","category":"Geek","price":45,"description":"Figura decorativa do Umbreon com 26 cm para coleção Pokémon.","image":"Fotos/Utensílios e Decoração/Umbreon.png"},
+  {"id":"balde-creeper-minecraft","name":"Balde do Creeper do Minecraft","category":"Geek","price":45,"description":"Balde temático do Creeper com 12 cm de altura e 14 cm de área para pipoca, doces ou decoração.","image":"Fotos/Utensílios e Decoração/Balde do Creeper do Minecraf.jpg"},
+  {"id":"snoopy","name":"Snoopy","category":"Geek","price":25,"description":"Figura decorativa do Snoopy com 18 cm para coleção ou presente.","image":"Fotos/Utensílios e Decoração/Snoopy.png"},
   {
     id: "balde-interrogacao",
     name: "Balde Bloco Interrogação",
     category: "Geek",
-    price: 30,
-    description: "Balde temático para pipoca, doces ou decoração geek.",
+    price: 40,
+    description: "Balde temático para pipoca, doces ou decoração geek. Possui 14 cm de altura e 15 cm de área.",
     image: "Fotos/Utensílios e Decoração/Balde de Pipoca para Filme Bloco de Interrogação.jpg"
   },
   {
@@ -431,7 +459,8 @@ const products = [
     category: "Kpop",
     price: 5,
     description: "Chaveiros inspirados em lightsticks de grupos Kpop.",
-    image: "Fotos/Kpop/KPop Lightstick keyrings.jpg"
+    image: "Fotos/Kpop/KPop Lightstick keyrings.jpg",
+    unavailable: true
   },
   {
     id: "bts-logo-keychains",
@@ -1498,6 +1527,9 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
+
+
 
 
 
