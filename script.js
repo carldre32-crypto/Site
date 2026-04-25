@@ -86,7 +86,8 @@ const products = [
     category: "Geek",
     price: 75,
     description: "Balde de salgadinhos e pipoca com visual divertido para sessões de filme.",
-    image: "Fotos/Utensílios e Decoração/Porta-Pipoca Balde de Salgadinhos Super Cogumelo.jpg"
+    image: "Fotos/Utensílios e Decoração/Porta-Pipoca Balde de Salgadinhos Super Cogumelo.jpg",
+    hiddenFromCatalog: true
   },
   {
     id: "pantera-geometrica",
@@ -1497,6 +1498,7 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
 
 
 
