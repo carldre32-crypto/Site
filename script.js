@@ -87,7 +87,7 @@ const products = [
     price: 75,
     description: "Balde de salgadinhos e pipoca com visual divertido para sessões de filme.",
     image: "Fotos/Utensílios e Decoração/Porta-Pipoca Balde de Salgadinhos Super Cogumelo.jpg",
-    hiddenFromCatalog: true
+    unavailable: true
   },
   {
     id: "pantera-geometrica",
@@ -1135,7 +1135,7 @@ function productCardTemplate(product) {
                 </button>
               `).join("")}
             </div>
-          ` : `<button class="product-button" type="button" data-add-product="${product.id}">Adicionar</button>`}
+          ` : (product.unavailable ? `<button class="product-button is-unavailable" type="button" disabled aria-disabled="true">Indisponível</button>` : `<button class="product-button" type="button" data-add-product="${product.id}">Adicionar</button>`)}
         </div>
       </div>
     </article>
@@ -1498,6 +1498,7 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
 
 
 

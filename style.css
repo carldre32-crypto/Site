@@ -712,6 +712,14 @@ h2 {
   padding: 0 14px;
 }
 
+.product-button.is-unavailable,
+.product-button:disabled {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--muted);
+  cursor: not-allowed;
+  transform: none;
+}
+
 .cart-panel {
   inset: 0;
   pointer-events: none;
@@ -1551,6 +1559,7 @@ h2 {
     width: 100%;
   }
 }
+
 
 
 
