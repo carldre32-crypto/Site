@@ -335,6 +335,17 @@ h2 {
   width: 12px;
 }
 
+.color-note small {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.product-color-note {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
 .intro-section,
 .catalog-section,
 .custom-section,
@@ -1540,6 +1551,7 @@ h2 {
     width: 100%;
   }
 }
+
 
 
 

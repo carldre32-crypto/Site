@@ -1079,6 +1079,12 @@ function hasConsultationItems() {
   return getCartItems().some((item) => typeof item.product.price !== "number");
 }
 
+const DECOR_UTILS_COLOR_NOTE = "Cores disponíveis: branco, preto, azul, rosa, verde, amarelo, lavanda e vermelho. Se a foto aparecer em cinza, faremos em preto.";
+
+function shouldShowDecorUtilsColorNote(product) {
+  return product.category === "Decoração" || product.category === "Utensílios";
+}
+
 function getCartTotal() {
   return getCartItems().reduce((total, item) => total + getProductPrice(item.product) * item.quantity, 0);
 }
@@ -1093,6 +1099,7 @@ function productCardTemplate(product) {
         <span class="product-category">${product.category}</span>
         <h3>${product.name}</h3>
         <p>${product.description}</p>
+        ${shouldShowDecorUtilsColorNote(product) ? `<small class="product-color-note">${DECOR_UTILS_COLOR_NOTE}</small>` : ""}
         <div class="product-tags" aria-label="Tags de ${product.name}">
           ${product.searchTags.slice(0, 5).map((tag) => `<span>${tag}</span>`).join("")}
         </div>
@@ -1490,6 +1497,9 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
+
+
 
 
 
