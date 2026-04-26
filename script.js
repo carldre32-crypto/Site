@@ -397,6 +397,7 @@ const products = [
   {"id":"umbreon","name":"Umbreon","category":"Geek","price":45,"description":"Figura decorativa do Umbreon com 26 cm para coleção Pokémon.","image":"Fotos/Utensílios e Decoração/Umbreon.png"},
   {"id":"balde-creeper-minecraft","name":"Balde do Creeper do Minecraft","category":"Geek","price":45,"description":"Balde temático do Creeper com 12 cm de altura e 14 cm de área para pipoca, doces ou decoração.","image":"Fotos/Utensílios e Decoração/Balde do Creeper do Minecraf.jpg"},
   {"id":"snoopy","name":"Snoopy","category":"Geek","price":25,"description":"Figura decorativa do Snoopy com 18 cm para coleção ou presente.","image":"Fotos/Utensílios e Decoração/Snoopy.png"},
+  {"id":"hello-kitty","name":"Hello Kitty","category":"Geek","price":70,"description":"Figura decorativa da Hello Kitty com 22 cm para coleção ou presente.","image":"Fotos/Utensílios e Decoração/Hello Kitty.png"},
   {
     id: "balde-interrogacao",
     name: "Balde Bloco Interrogação",
@@ -1565,6 +1566,7 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
 
 
 
