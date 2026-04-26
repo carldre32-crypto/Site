@@ -23,32 +23,6 @@ const products = [
     image: "Fotos/Utensílios e Decoração/Balde de Pipoca para Filmes Tubo de Teletransporte Lanche para Jogo.jpg"
   },
   {
-    id: "caixa-organizadora-cosmeticos",
-    name: "Caixa organizadora de cosméticos",
-    category: "Utensílios",
-    price: 25,
-    description: "Organizador funcional para bancada, penteadeira ou mesa de trabalho.",
-    image: "Fotos/Utensílios e Decoração/Caixa organizadora de cosméticos.jpg"
-  },
-  {
-    id: "caixa-organizadora-cosmeticos-10cm",
-    name: "Caixa organizadora de cosméticos - 10 cm",
-    category: "Utensílios",
-    price: 25,
-    description: "Versão de 10 cm da caixa organizadora de cosméticos.",
-    image: "Fotos/Utensílios e Decoração/Caixa organizadora de cosméticos.jpg",
-    hiddenFromCatalog: true
-  },
-  {
-    id: "caixa-organizadora-cosmeticos-20cm",
-    name: "Caixa organizadora de cosméticos - 20 cm",
-    category: "Utensílios",
-    price: 35,
-    description: "Versão de 20 cm da caixa organizadora de cosméticos.",
-    image: "Fotos/Utensílios e Decoração/Caixa organizadora de cosméticos.jpg",
-    hiddenFromCatalog: true
-  },
-  {
     id: "hexa-link-prateleiras",
     name: "Sistema Hexa-Link de prateleiras",
     category: "Utensílios",
@@ -902,14 +876,6 @@ const products = [
 
 const productTextOverrides = {
   "minecraft-movie-tnt-popcorn-bucket": { name: "Balde TNT Minecraft" },
-  "caixa-organizadora-cosmeticos": {
-    description: "Organizador funcional para bancada, penteadeira ou mesa de trabalho. Disponível em 10 cm e 20 cm no mesmo anúncio.",
-    priceLabel: "10 cm: R$ 25,00 | 20 cm: R$ 35,00",
-    variantOptions: [
-      { productId: "caixa-organizadora-cosmeticos-10cm", label: "Adicionar 10 cm", priceLabel: "R$ 25,00" },
-      { productId: "caixa-organizadora-cosmeticos-20cm", label: "Adicionar 20 cm", priceLabel: "R$ 35,00" }
-    ]
-  },
   "balde-tubo-teletransporte": { name: "Balde Tubo Verde" },
   "hexa-link-prateleiras": { name: "Prateleira Hexa-Link" },
   "suporte-controle-cubone": { name: "Suporte Cubone" },
