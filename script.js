@@ -1109,10 +1109,48 @@ function hasConsultationItems() {
   return getCartItems().some((item) => typeof item.product.price !== "number");
 }
 
+const PRODUCT_COLOR_SWATCHES = [
+  { name: "Branco", color: "#ffffff" },
+  { name: "Preto", color: "#080808" },
+  { name: "Azul", color: "#2f7df6" },
+  { name: "Rosa", color: "#ff8fc7" },
+  { name: "Verde", color: "#2fbe63" },
+  { name: "Amarelo", color: "#ffd318" },
+  { name: "Lavanda", color: "#8b5cf6" },
+  { name: "Vermelho", color: "#ef3030" }
+];
+
 const DECOR_UTILS_COLOR_NOTE = "Cores disponíveis: branco, preto, azul, rosa, verde, amarelo, lavanda e vermelho. Se a foto aparecer em cinza, faremos em preto.";
 
 function shouldShowDecorUtilsColorNote(product) {
   return product.category === "Decoração" || product.category === "Utensílios";
+}
+
+function shouldShowProductColorSwatches(product) {
+  if (product.hideColorSwatches) return false;
+
+  const alwaysCustomizableCategories = ["Utensílios", "Acessórios", "Dummys", "Kit Dummy Soldado"];
+  if (alwaysCustomizableCategories.includes(product.category)) return true;
+
+  const searchableText = normalizeSearchText(`${product.name} ${product.description}`);
+  if (product.category === "Geek") {
+    return /balde|bucket|porta|holder|stand|suporte|knife|faca|batarang|blaster|custom|name|nome/.test(searchableText);
+  }
+
+  if (product.category === "Decoração") {
+    return /vaso|vase|flor|flower|bonsai|cubo|bowl|porta|holder|organizer|box|caixa/.test(searchableText);
+  }
+
+  return false;
+}
+
+function productColorSwatchesTemplate(product) {
+  if (!shouldShowProductColorSwatches(product)) return "";
+
+  return `
+        <div class="product-palette" aria-label="Cores disponíveis para ${product.name}">
+          ${PRODUCT_COLOR_SWATCHES.map((swatch) => `<span style="--swatch: ${swatch.color}" title="${swatch.name}"></span>`).join("")}
+        </div>`;
 }
 
 function getCartTotal() {
@@ -1527,6 +1565,7 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
 
 
 

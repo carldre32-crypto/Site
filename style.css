@@ -564,6 +564,20 @@ h2 {
   padding: 7px 8px;
 }
 
+.product-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.product-palette span {
+  background: var(--swatch);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+}
+
 .empty-results {
   border: 1px dashed var(--line);
   color: var(--muted);
@@ -1538,6 +1552,15 @@ h2 {
     padding: 5px 6px;
   }
 
+  .product-palette {
+    gap: 5px;
+  }
+
+  .product-palette span {
+    height: 10px;
+    width: 10px;
+  }
+
   .product-footer {
     gap: 8px;
   }
@@ -1559,6 +1582,7 @@ h2 {
     width: 100%;
   }
 }
+
 
 
 
