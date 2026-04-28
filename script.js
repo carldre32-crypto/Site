@@ -1024,6 +1024,8 @@ products.forEach((product) => {
   }
 });
 
+const TEMPORARILY_HIDDEN_CATEGORIES = ["Dummys", "Acessórios", "Kit Dummy Soldado"];
+
 const cart = new Map();
 
 const productGrid = document.querySelector("[data-product-grid]");
@@ -1187,8 +1189,8 @@ function renderKpopShowcase() {
 function renderProducts(category = selectedCategory) {
   selectedCategory = category;
   const query = searchInput ? searchInput.value : "";
-  const categoryOrder = ["Geek", "Utensílios", "Decoração", "Kpop", "Dummys", "Acessórios", "Kit Dummy Soldado"];
-  const catalogProducts = products.filter((product) => !product.hiddenFromCatalog && productMatchesSearch(product, query));
+  const categoryOrder = ["Geek", "Utensílios", "Decoração", "Kpop"];
+  const catalogProducts = products.filter((product) => !product.hiddenFromCatalog && !TEMPORARILY_HIDDEN_CATEGORIES.includes(product.category) && productMatchesSearch(product, query));
 
   if (category === "Todos") {
     productGrid.classList.add("is-grouped");
@@ -1541,6 +1543,7 @@ renderCart();
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
 
 
 
