@@ -1027,6 +1027,7 @@ products.forEach((product) => {
 const cart = new Map();
 
 const productGrid = document.querySelector("[data-product-grid]");
+const kpopGrid = document.querySelector("[data-kpop-grid]");
 const cartPanel = document.querySelector("[data-cart-panel]");
 const cartItems = document.querySelector("[data-cart-items]");
 const cartCount = document.querySelector("[data-cart-count]");
@@ -1138,6 +1139,7 @@ function productCardTemplate(product) {
         <div class="product-tags" aria-label="Tags de ${product.name}">
           ${product.searchTags.slice(0, 5).map((tag) => `<span>${tag}</span>`).join("")}
         </div>
+        ${productColorSwatchesTemplate(product)}
         ${product.calculation ? `
           <div class="kit-calculation">
             <strong>Preço do kit: ${formatMoney(product.calculation.kitPrice)}</strong>
@@ -1176,6 +1178,12 @@ function productCardTemplate(product) {
   `;
 }
 
+function renderKpopShowcase() {
+  if (!kpopGrid) return;
+
+  const kpopProducts = products.filter((product) => !product.hiddenFromCatalog && product.category === "Kpop");
+  kpopGrid.innerHTML = kpopProducts.map(productCardTemplate).join("");
+}
 function renderProducts(category = selectedCategory) {
   selectedCategory = category;
   const query = searchInput ? searchInput.value : "";
@@ -1526,12 +1534,15 @@ customForm.addEventListener("submit", async (event) => {
   }
 });
 
+renderKpopShowcase();
 renderProducts();
 renderCart();
 
 const customWhatsappUrl = buildCustomWhatsAppUrl();
 customWhatsappLink.href = customWhatsappUrl;
 floatingWhatsapp.href = customWhatsappUrl;
+
+
 
 
 
