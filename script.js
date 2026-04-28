@@ -1011,17 +1011,6 @@ products.forEach((product) => {
 
   product.searchTags = getProductTags(product);
   product.searchIndex = normalizeSearchText(product.searchTags.join(" "));
-
-  if (/personaliz|customiz/i.test(product.description)) {
-    const cleanDescription = product.description
-      .replace(/,?\s*com tamanho personalizável\.?/gi, "")
-      .replace(/tamanho personalizável\.?/gi, "")
-      .replace(/tamanho customizável\.?/gi, "")
-      .replace(/\s+/g, " ")
-      .trim();
-
-    product.description = `${cleanDescription} Chame no WhatsApp para pedir tamanhos customizáveis!`;
-  }
 });
 
 const TEMPORARILY_HIDDEN_CATEGORIES = ["Dummys", "Acessórios", "Kit Dummy Soldado"];
