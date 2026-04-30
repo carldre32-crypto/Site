@@ -1,4 +1,4 @@
-﻿# Apex 3D Impressões - Site catálogo
+# Apex 3D Impressões - Site catálogo
 
 Site estático em HTML, CSS e JavaScript para catálogo com carrinho de pedidos. Não há pagamento online: o pedido é organizado pelo site e o pagamento é combinado depois pelo WhatsApp via Pix.
 
@@ -48,7 +48,6 @@ As áreas do catálogo também usam o campo `category`. As categorias atuais sã
 - `Geek`
 - `Utensílios`
 - `Decoração`
-- `Kpop`
 - `Dummys`
 - `Acessórios`
 - `Kit Dummy Soldado`

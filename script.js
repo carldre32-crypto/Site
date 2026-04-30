@@ -1,4 +1,4 @@
-﻿// Configurações principais: troque estes valores antes de publicar.
+// Configurações principais: troque estes valores antes de publicar.
 const CONFIG = {
   orderEmail: "apex3dfuture@gmail.com",
   whatsappNumber: "5591984136534"
@@ -349,28 +349,31 @@ const products = [
   {"id":"resident-evil-matilda","name":"Resident Evil 4 - VP70M Matilda","category":"Geek","price":35,"description":"Peça decorativa inspirada na Matilda de Resident Evil 4 para coleção ou cosplay leve.","image":"Fotos/Utensílios e Decoração/Resident Evil 4 - vp70m - Matilda - matilda.png"},
   {"id":"valorant-kuronami-knife","name":"Valorant Kuronami Knife","category":"Geek","price":25,"description":"Faca decorativa inspirada em Valorant para setup gamer, coleção ou presente.","image":"Fotos/Utensílios e Decoração/Valorant Kuronami Knife.png"},
   {"id":"charmander-chibi","name":"Charmander Chibi","category":"Geek","price":15,"description":"Miniatura chibi do Charmander para mesa, estante ou presente geek.","image":"Fotos/Utensílios e Decoração/Charmander Chibi.png"},
-  {"id":"mudkip-pokemon","name":"Mudkip Pokemon","category":"Geek","price":18,"description":"Miniatura do Mudkip para coleção Pokémon, mesa ou estante.","image":"Fotos/Utensílios e Decoração/Mudkip Pokemon - NO AMS Multipart + AMS.png"},
-  {"id":"hulk-multipart","name":"HULK","category":"Geek","price":45,"description":"Figura decorativa do Hulk em multipart multicolor para coleção ou presente.","image":"Fotos/Utensílios e Decoração/HULK  NO AMS - MULTIPART MULTICOLOR.png"},
-  {"id":"snorlax-multipart","name":"Snorlax","category":"Geek","price":60,"description":"Figura decorativa do Snorlax para coleção Pokémon, mesa ou estante.","image":"Fotos/Utensílios e Decoração/Snorlax Multipart NO AMS.png"},
+  {"id":"jolteon-pokemon","name":"Jolteon (Pokémon)","category":"Geek","price":85,"description":"Figura decorativa do Jolteon para coleção Pokémon, mesa ou estante.","image":"Fotos/Utensílios e Decoração/Jolteon (Pokémon).png"},
+  {"id":"gengar-pokemon","name":"Gengar Pokemon","category":"Geek","price":70,"description":"Figura decorativa do Gengar para coleção Pokémon, mesa ou estante.","image":"Fotos/Utensílios e Decoração/Gengar Pokemon.png"},
+  {"id":"pokopia-qianqianqius-smile","name":"pokopia Qianqianqiu's Smile","category":"Geek","price":45,"description":"Peça decorativa Pokopia Qianqianqiu's Smile para coleção, mesa ou estante.","image":"Fotos/Utensílios e Decoração/pokopia Qianqianqiu's Smile.png"},
+  {"id":"mudkip-pokemon","name":"Mudkip Pokemon","category":"Geek","price":25,"description":"Miniatura do Mudkip para coleção Pokémon, mesa ou estante.","image":"Fotos/Utensílios e Decoração/Mudkip Pokemon - NO AMS Multipart + AMS.png"},
+  {"id":"hulk-multipart","name":"HULK","category":"Geek","price":60,"description":"Figura decorativa do Hulk em multipart multicolor para coleção ou presente.","image":"Fotos/Utensílios e Decoração/HULK  NO AMS - MULTIPART MULTICOLOR.png"},
+  {"id":"snorlax-multipart","name":"Snorlax","category":"Geek","price":70,"description":"Figura decorativa do Snorlax para coleção Pokémon, mesa ou estante.","image":"Fotos/Utensílios e Decoração/Snorlax Multipart NO AMS.png"},
   {"id":"mew-chibi","name":"Mew Chibi","category":"Geek","price":15,"description":"Miniatura chibi do Mew para coleção Pokémon ou presente geek.","image":"Fotos/Utensílios e Decoração/Mew Chibi.png"},
   {"id":"kuromi","name":"Kuromi","category":"Geek","price":25,"description":"Peça decorativa da Kuromi para mesa, estante ou presente.","image":"Fotos/Utensílios e Decoração/Kuromi.png"},
-  {"id":"eevee","name":"Eevee","category":"Geek","price":35,"description":"Figura decorativa do Eevee para coleção Pokémon ou presente geek.","image":"Fotos/Utensílios e Decoração/Eevee.png"},
+  {"id":"eevee","name":"Eevee","category":"Geek","price":50,"description":"Figura decorativa do Eevee para coleção Pokémon ou presente geek.","image":"Fotos/Utensílios e Decoração/Eevee.png"},
   {"id":"pen-holder-paper-bag","name":"Pen Holder - Paper Bag","category":"Utensílios","price":15,"description":"Porta-lápis em formato de saco de papel para mesa de trabalho ou estudos.","image":"Fotos/Utensílios e Decoração/Pen Holder - Paper Bag.png"},
   {"id":"little-fat-cat","name":"Little Fat Cat","category":"Decoração","price":5,"description":"Mini gato decorativo de 2,5 cm para mesa, nicho ou presente pequeno.","image":"Fotos/Utensílios e Decoração/Little Fat Cat.png"},
   {"id":"halloween-cat-mini-figures","name":"Halloween Cat Mini Figures","category":"Decoração","price":5,"description":"Mini figura de gato Halloween com 2,6 cm para decoração temática.","image":"Fotos/Utensílios e Decoração/Halloween Cat Mini Figures – Set of 6.png"},
   {"id":"fisherman-incense-holder","name":"Fisherman","category":"Decoração","price":18,"description":"Peça decorativa de pescador com 10 cm, ideal para mesa, nicho ou porta-incenso.","image":"Fotos/Utensílios e Decoração/Fisherman - Incense stick holde.png"},
   {"id":"bowser-super-mario","name":"BOWSER SUPER MARIO","category":"Geek","price":120,"description":"Figura decorativa do Bowser com 21 cm para coleção Super Mario.","image":"Fotos/Utensílios e Decoração/BOWSER SUPER MARIO.png"},
-  {"id":"yoshi-super-mario","name":"Yoshi","category":"Geek","price":25,"description":"Figura decorativa do Yoshi com 13 cm para coleção Super Mario.","image":"Fotos/Utensílios e Decoração/Yoshi Oeuf multipart.png"},
+  {"id":"yoshi-super-mario","name":"Yoshi","category":"Geek","price":50,"description":"Figura decorativa do Yoshi com 13 cm para coleção Super Mario.","image":"Fotos/Utensílios e Decoração/Yoshi Oeuf multipart.png"},
   {"id":"dire-wolf","name":"Dire Wolf","category":"Decoração","price":25,"description":"Lobo decorativo com 12 cm para mesa, estante ou presente.","image":"Fotos/Utensílios e Decoração/Dire Wolf.png"},
-  {"id":"luma-star","name":"Luma Star","category":"Geek","price":25,"description":"Estrela Luma com 12 cm para coleção Super Mario ou decoração geek.","image":"Fotos/Utensílios e Decoração/Luma Star.png"},
+  {"id":"luma-star","name":"Luma Star","category":"Geek","price":30,"description":"Estrela Luma com 12 cm para coleção Super Mario ou decoração geek.","image":"Fotos/Utensílios e Decoração/Luma Star.png"},
   {"id":"roku-remote-holder","name":"Roku Remote Holder","category":"Utensílios","price":7,"description":"Suporte para controle Roku ou controles pequenos de mesa e sala.","image":"Fotos/Utensílios e Decoração/Roku Remote Holder.png"},
   {"id":"tech-station-desk-organizer","name":"Tech-Station Desk Organizer","category":"Utensílios","price":30,"description":"Organizador de mesa com 7,5 cm para acessórios, cabos e itens de setup.","image":"Fotos/Utensílios e Decoração/Tech-Station Desk Organizer.png"},
-  {"id":"espeon","name":"Espeon","category":"Geek","price":50,"description":"Figura decorativa do Espeon com 25 cm para coleção Pokémon.","image":"Fotos/Utensílios e Decoração/Espeon.png"},
+  {"id":"espeon","name":"Espeon","category":"Geek","price":70,"description":"Figura decorativa do Espeon com 25 cm para coleção Pokémon.","image":"Fotos/Utensílios e Decoração/Espeon.png"},
   {"id":"low-poly-dinosaur-skull","name":"Low Poly Dinosaur Skull","category":"Decoração","price":30,"description":"Crânio de dinossauro low-poly com 8 cm para decoração geek ou científica.","image":"Fotos/Utensílios e Decoração/Low Poly Dinosaur Skull.png"},
   {"id":"giant-lego-droid-blaster","name":"Giant LEGO Droid Blaster","category":"Geek","price":35,"description":"Blaster estilo LEGO Droid com 18 cm de comprimento para coleção ou cosplay leve.","image":"Fotos/Utensílios e Decoração/Giant LEGO Droid Blaster.png"},
-  {"id":"umbreon","name":"Umbreon","category":"Geek","price":45,"description":"Figura decorativa do Umbreon com 26 cm para coleção Pokémon.","image":"Fotos/Utensílios e Decoração/Umbreon.png"},
+  {"id":"umbreon","name":"Umbreon","category":"Geek","price":70,"description":"Figura decorativa do Umbreon com 26 cm para coleção Pokémon.","image":"Fotos/Utensílios e Decoração/Umbreon.png"},
   {"id":"balde-creeper-minecraft","name":"Balde do Creeper do Minecraft","category":"Geek","price":45,"description":"Balde temático do Creeper com 12 cm de altura e 14 cm de área para pipoca, doces ou decoração.","image":"Fotos/Utensílios e Decoração/Balde do Creeper do Minecraf.jpg"},
-  {"id":"snoopy","name":"Snoopy","category":"Geek","price":25,"description":"Figura decorativa do Snoopy com 18 cm para coleção ou presente.","image":"Fotos/Utensílios e Decoração/Snoopy.png"},
+  {"id":"snoopy","name":"Snoopy","category":"Geek","price":50,"description":"Figura decorativa do Snoopy com 18 cm para coleção ou presente.","image":"Fotos/Utensílios e Decoração/Snoopy.png"},
   {"id":"hello-kitty","name":"Hello Kitty","category":"Geek","price":70,"description":"Figura decorativa da Hello Kitty com 22 cm para coleção ou presente.","image":"Fotos/Utensílios e Decoração/Hello Kitty.png"},
   {
     id: "balde-interrogacao",
@@ -387,103 +390,6 @@ const products = [
     price: 20,
     description: "Organizador para pincéis, maquiagem e itens de bancada.",
     image: "Fotos/Utensílios e Decoração/Suporte para Pincéis de Maquiagem.png"
-  },
-  {
-    id: "bts-arirang-tour-sign",
-    name: "BTS Arirang Tour Sign",
-    category: "Kpop",
-    price: 15,
-    description: "Peça decorativa Kpop com tamanho personalizável.",
-    image: "Fotos/Kpop/BTS Arirang Tour Sign.jpg"
-  },
-  {
-    id: "bts-statue",
-    name: "BTS Statue Bangtan Sonyeondan",
-    category: "Kpop",
-    price: 20,
-    description: "Estátua temática BTS com tamanho personalizável.",
-    image: "Fotos/Kpop/BTS Statue Bangtan Sonyeondan.jpg"
-  },
-  {
-    id: "huntrix-logo-keychain",
-    name: "KPop Demon Hunters Huntrix Logo Keychain",
-    category: "Kpop",
-    price: 6,
-    description: "Chaveiro Kpop com tamanho personalizável.",
-    image: "Fotos/Kpop/KPop Demon Hunters Huntrix Logo Keychain version 2.jpg"
-  },
-  {
-    id: "kpop-ornaments-set-2",
-    name: "KPop Ornaments Set 2",
-    category: "Kpop",
-    price: 20,
-    description: "Grupos disponíveis: BTS, iKON, Oh My Girl, Day6, MCND, Everglow, EXID, N.Flying, SuJu, T-ARA, Hyuna, Apink, AOA, Dreamcatcher, BigBang, Girls' Generation, VIXX, BTOB, KARD, SHINee e f(x).",
-    image: "Fotos/Kpop/KPop Ornaments Set 2.jpg"
-  },
-  {
-    id: "kpop-ornaments",
-    name: "KPop Ornaments",
-    category: "Kpop",
-    price: 20,
-    description: "Grupos disponíveis: ONEUS, K/DA, BTS, G-IDLE, ATEEZ, Seventeen, NCT, LOONA, Verivery, CLC, EXO, GFriend, The Boyz, Golden Child, Wanna One, ONF, TWICE, ITZY, TOO, A.C.E, NU'EST, Pentagon, SF9, Blackpink, GOT7, WayV, Astro, Stray Kids, AB6IX, TXT, Monsta X e Red Velvet.",
-    image: "Fotos/Kpop/KPop Ornaments.jpg"
-  },
-  {
-    id: "kpop-lightstick-keyrings",
-    name: "KPop Lightstick keyrings",
-    category: "Kpop",
-    price: 5,
-    description: "Chaveiros inspirados em lightsticks de grupos Kpop.",
-    image: "Fotos/Kpop/KPop Lightstick keyrings.jpg",
-    unavailable: true
-  },
-  {
-    id: "bts-logo-keychains",
-    name: "BTS K Pop Logo and Keychains",
-    category: "Kpop",
-    price: 3,
-    description: "Logos e chaveiros BTS para presente ou coleção.",
-    image: "Fotos/Kpop/BTS K Pop Logo and Keychains.jpg"
-  },
-  {
-    id: "bts-headphone-stand",
-    name: "BTS Headphone Stand",
-    category: "Kpop",
-    price: 25,
-    description: "Suporte de headphone temático BTS.",
-    image: "Fotos/Kpop/BTS Headphone Stand.jpg"
-  },
-  {
-    id: "huntrix-logo-stand",
-    name: "Logo Huntrix de Mesa",
-    category: "Kpop",
-    price: 15,
-    description: "Logo decorativo Huntrix para mesa, prateleira ou setup.",
-    image: "Fotos/Kpop/KPop Demon Hunters Huntrix Huntrx Logo Stand.png"
-  },
-  {
-    id: "saja-boys-light-stick",
-    name: "Kpop Demon Hunter Saja boys light stick",
-    category: "Kpop",
-    price: 40,
-    description: "Light stick temático Kpop Demon Hunter Saja boys.",
-    image: "Fotos/Kpop/Kpop Demon Hunter Saja boys light stick.png"
-  },
-  {
-    id: "huntrix-light-stick",
-    name: "Kpop Demon hunter Huntrix light Stick",
-    category: "Kpop",
-    price: 40,
-    description: "Light stick temático Huntrix/Huntr-x para fãs de Kpop Demon Hunter.",
-    image: "Fotos/Kpop/Kpop Demon hunter Huntrix(Huntr-x) light Stick.png"
-  },
-  {
-    id: "whalien-zero-oclock",
-    name: "WHALIEN ZERO O'CLOCK",
-    category: "Kpop",
-    price: 30,
-    description: "Peça decorativa Kpop WHALIEN ZERO O'CLOCK para mesa, estante ou setup.",
-    image: "Fotos/Kpop/WHALIEN ZERO O'CLOCK.png"
   },
   {
     id: "dummy-carbon-back-fists",
@@ -901,18 +807,6 @@ const productTextOverrides = {
   "headphones-stand": { name: "Suporte de Headphone" },
   "makeup-organizer-inflated-bathroom-set": { name: "Organizador de Maquiagem" },
   "vase-with-roses-stems": { name: "Vaso com Rosas" },
-  "bts-arirang-tour-sign": { name: "Placa BTS Arirang" },
-  "bts-statue": { name: "Estátua BTS" },
-  "huntrix-logo-keychain": { name: "Chaveiro Huntrix" },
-  "kpop-ornaments-set-2": { name: "Ornamentos Kpop 2" },
-  "kpop-ornaments": { name: "Ornamentos Kpop" },
-  "kpop-lightstick-keyrings": { name: "Chaveiros Lightstick" },
-  "bts-logo-keychains": { name: "Chaveiros BTS" },
-  "bts-headphone-stand": { name: "Suporte BTS" },
-  "huntrix-logo-stand": { name: "Logo Huntrix" },
-  "saja-boys-light-stick": { name: "Light Stick Saja Boys" },
-  "huntrix-light-stick": { name: "Light Stick Huntrix" },
-  "whalien-zero-oclock": { name: "Whalien Zero" },
   "dummy-carbon-back-fists": { name: "Punhos Traseiros" },
   "dummy-heavy-armor-kit": { name: "Armadura Pesada" },
   "dummy-drop-leg-holster": { name: "Coldre de Perna" },
@@ -991,8 +885,6 @@ function getProductTags(product) {
   const addWhen = (pattern, tags) => {
     if (pattern.test(text)) synonymTags.push(...tags);
   };
-
-  addWhen(/kpop|bts|huntr|saja|lightstick|chaveiro|ornament/, ["kpop", "musica", "show", "fandom", "presente"]);
   addWhen(/dummy|armor|armadura|arma|gun|metralhadora|mascara|colete|bota|jetpack|shield|escudo/, ["dummy", "boneco", "figura", "acessorio", "customizacao"]);
   addWhen(/lobo|gato|cachorro|coelho|coruja|pantera|jesus|bonsai|flor|tulip|vaso|caveira/, ["decoracao", "mesa", "estante", "presente"]);
   addWhen(/balde|pipoca|porta|organizador|suporte|prateleira|headphone|pincel|cosmetico/, ["utensilio", "organizador", "casa", "setup"]);
@@ -1018,7 +910,6 @@ const TEMPORARILY_HIDDEN_CATEGORIES = ["Dummys", "Acessórios", "Kit Dummy Solda
 const cart = new Map();
 
 const productGrid = document.querySelector("[data-product-grid]");
-const kpopGrid = document.querySelector("[data-kpop-grid]");
 const cartPanel = document.querySelector("[data-cart-panel]");
 const cartItems = document.querySelector("[data-cart-items]");
 const cartCount = document.querySelector("[data-cart-count]");
@@ -1169,16 +1060,10 @@ function productCardTemplate(product) {
   `;
 }
 
-function renderKpopShowcase() {
-  if (!kpopGrid) return;
-
-  const kpopProducts = products.filter((product) => !product.hiddenFromCatalog && product.category === "Kpop");
-  kpopGrid.innerHTML = kpopProducts.map(productCardTemplate).join("");
-}
 function renderProducts(category = selectedCategory) {
   selectedCategory = category;
   const query = searchInput ? searchInput.value : "";
-  const categoryOrder = ["Geek", "Utensílios", "Decoração", "Kpop"];
+  const categoryOrder = ["Geek", "Utensílios", "Decoração"];
   const catalogProducts = products.filter((product) => !product.hiddenFromCatalog && !TEMPORARILY_HIDDEN_CATEGORIES.includes(product.category) && productMatchesSearch(product, query));
 
   if (category === "Todos") {
@@ -1525,7 +1410,6 @@ customForm.addEventListener("submit", async (event) => {
   }
 });
 
-renderKpopShowcase();
 renderProducts();
 renderCart();
 
