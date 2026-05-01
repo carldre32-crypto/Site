@@ -362,6 +362,13 @@ const products = [
   {"id":"little-fat-cat","name":"Little Fat Cat","category":"Decoração","price":5,"description":"Mini gato decorativo de 2,5 cm para mesa, nicho ou presente pequeno.","image":"Fotos/Utensílios e Decoração/Little Fat Cat.png"},
   {"id":"halloween-cat-mini-figures","name":"Halloween Cat Mini Figures","category":"Decoração","price":5,"description":"Mini figura de gato Halloween com 2,6 cm para decoração temática.","image":"Fotos/Utensílios e Decoração/Halloween Cat Mini Figures – Set of 6.png"},
   {"id":"fisherman-incense-holder","name":"Fisherman","category":"Decoração","price":18,"description":"Peça decorativa de pescador com 10 cm, ideal para mesa, nicho ou porta-incenso.","image":"Fotos/Utensílios e Decoração/Fisherman - Incense stick holde.png"},
+  {"id":"tiny-tan-bts-stand-v3","name":"Tiny Tan BTS Stand V3","category":"Kpop","price":25,"description":"Stand decorativo TinyTAN BTS para coleção Kpop, mesa ou estante.","image":"Fotos/Kpop/Tiny Tan BTS Stand V3.png"},
+  {"id":"bts-arirang-tour","name":"BTS Arirang Tour","category":"Kpop","price":7,"description":"Peça decorativa BTS Arirang Tour para coleção Kpop ou presente.","image":"Fotos/Kpop/BTS Arirang Tour.png"},
+  {"id":"bts-light-stick-holder","name":"BTS light stick holder","category":"Kpop","price":10,"description":"Suporte para light stick BTS, ideal para coleção e exposição.","image":"Fotos/Kpop/BTS light stick holder.png"},
+  {"id":"bts-arirang-army-bomb-display-stand","name":"BTS ARIRANG – Army Bomb Display Stand","category":"Kpop","price":25,"description":"Display stand BTS ARIRANG para Army Bomb e coleção Kpop.","image":"Fotos/Kpop/BTS ARIRANG – Army Bomb Display Stand.png"},
+  {"id":"korean-i-love-you-sign-decoration","name":"Korean I love you sign decoration","category":"Kpop","price":15,"description":"Decoração com sinal coreano de amor para mesa, estante ou presente.","image":"Fotos/Kpop/Korean I love you sign decoration.png"},
+  {"id":"bts-tinytan-stand","name":"BTS TinyTan Stand","category":"Kpop","price":70,"description":"Stand BTS TinyTAN maior para coleção Kpop e exposição.","image":"Fotos/Kpop/BTS_TinyTan_Stand.png"},
+  {"id":"happy-meal-box-base-bts-tinytan","name":"Happy Meal box base for BTS TinyTAN","category":"Kpop","priceLabel":"Sob consulta","description":"Base Happy Meal para BTS TinyTAN. Consulte valor pelo WhatsApp.","image":"Fotos/Kpop/Happy Meal box base for BTS TinyTAN.png"},
   {"id":"chill-dog-on-surf","name":"Chill dog on surf","category":"Decoração","priceLabel":"Sob consulta","description":"Peça decorativa de cachorro surfista para mesa, estante ou presente.","image":"Fotos/Utensílios e Decoração/Chill dog on surf.png"},
   {"id":"deadpool","name":"Deadpool","category":"Geek","priceLabel":"Sob consulta","description":"Peça decorativa do Deadpool para coleção geek, mesa ou estante.","image":"Fotos/Utensílios e Decoração/Deadpool.png"},
   {"id":"daffy","name":"Daffy","category":"Geek","priceLabel":"Sob consulta","description":"Peça decorativa do Daffy para coleção, mesa ou presente.","image":"Fotos/Utensílios e Decoração/Daffy.png"},
@@ -888,6 +895,7 @@ function getProductTags(product) {
   const addWhen = (pattern, tags) => {
     if (pattern.test(text)) synonymTags.push(...tags);
   };
+  addWhen(/kpop|bts|tinytan|army|korean|lightstick|light stick|arirang/, ["kpop", "bts", "musica", "show", "fandom", "presente"]);
   addWhen(/dummy|armor|armadura|arma|gun|metralhadora|mascara|colete|bota|jetpack|shield|escudo/, ["dummy", "boneco", "figura", "acessorio", "customizacao"]);
   addWhen(/lobo|gato|cachorro|coelho|coruja|pantera|jesus|bonsai|flor|tulip|vaso|caveira/, ["decoracao", "mesa", "estante", "presente"]);
   addWhen(/balde|pipoca|porta|organizador|suporte|prateleira|headphone|pincel|cosmetico/, ["utensilio", "organizador", "casa", "setup"]);
@@ -1066,7 +1074,7 @@ function productCardTemplate(product) {
 function renderProducts(category = selectedCategory) {
   selectedCategory = category;
   const query = searchInput ? searchInput.value : "";
-  const categoryOrder = ["Geek", "Utensílios", "Decoração"];
+  const categoryOrder = ["Geek", "Utensílios", "Decoração", "Kpop"];
   const catalogProducts = products.filter((product) => !product.hiddenFromCatalog && !TEMPORARILY_HIDDEN_CATEGORIES.includes(product.category) && productMatchesSearch(product, query));
 
   if (category === "Todos") {
