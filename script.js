@@ -22,6 +22,7 @@ const products = [
     description: "Balde criativo para filmes, jogos e presentes personalizados.",
     image: "Fotos/Utensílios e Decoração/Balde de Pipoca para Filmes Tubo de Teletransporte Lanche para Jogo.jpg"
   },
+  {"id":"caixa-organizadora-cosmeticos","name":"Caixa organizadora de cosméticos","category":"Utensílios","price":35,"description":"Caixa organizadora para cosméticos, maquiagem e acessórios de bancada.","image":"Fotos/Utensílios e Decoração/Caixa de armazenamento personalizável.jpg"},
   {
     id: "hexa-link-prateleiras",
     name: "Sistema Hexa-Link de prateleiras",
