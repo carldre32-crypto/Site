@@ -929,7 +929,7 @@ products.forEach((product) => {
   product.searchIndex = normalizeSearchText(product.searchTags.join(" "));
 });
 
-const TEMPORARILY_HIDDEN_CATEGORIES = ["Acessórios", "Kit Dummy Soldado"];
+const TEMPORARILY_HIDDEN_CATEGORIES = [];
 
 const cart = new Map();
 
@@ -1087,7 +1087,7 @@ function productCardTemplate(product) {
 function renderProducts(category = selectedCategory) {
   selectedCategory = category;
   const query = searchInput ? searchInput.value : "";
-  const categoryOrder = ["Geek", "Utensílios", "Decoração", "Kpop", "Dummys"];
+  const categoryOrder = ["Geek", "Utensílios", "Decoração", "Kpop", "Dummys", "Acessórios", "Kit Dummy Soldado"];
   const catalogProducts = products.filter((product) => !product.hiddenFromCatalog && !TEMPORARILY_HIDDEN_CATEGORIES.includes(product.category) && productMatchesSearch(product, query));
 
   if (category === "Todos") {
