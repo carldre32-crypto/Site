@@ -92,6 +92,35 @@ const regionForPixel = (x, y) => {
   return null;
 };
 
+const MAX_LEAK_DISTANCE = 40; // px: amarelo fora das máscaras é atribuído à peça mais próxima
+const segments = pieces.flatMap(({ key, mask }) =>
+  mask.flatMap((polygon) => polygon.map((point, i) => [key, point, polygon[(i + 1) % polygon.length]])));
+
+const distanceToSegment = (x, y, [ax, ay], [bx, by]) => {
+  const dx = bx - ax, dy = by - ay;
+  const lengthSq = dx * dx + dy * dy;
+  const t = lengthSq ? Math.max(0, Math.min(1, ((x - ax) * dx + (y - ay) * dy) / lengthSq)) : 0;
+  return Math.hypot(x - (ax + t * dx), y - (ay + t * dy));
+};
+
+const nearestRegion = (x, y) => {
+  let best = null, bestDistance = MAX_LEAK_DISTANCE;
+  for (const [key, a, b] of segments) {
+    const d = distanceToSegment(x, y, a, b);
+    if (d < bestDistance) { bestDistance = d; best = key; }
+  }
+  return best;
+};
+
+// Plástico amarelo = matiz amarelo, saturado, inclusive as áreas sombreadas.
+// Juntas/contornos (cinza e preto) têm saturação baixa e ficam intactos.
+const isYellowPlastic = (r, g, b) => {
+  const { h, s, l } = rgbToHsl(r, g, b);
+  return h >= .075 && h <= .2 && s > .3 && l > .06;
+};
+
+let regionMap = null; // região de cada pixel, calculada uma única vez a partir da foto base amarela
+
 const hexToRgb = (hex) => ({
   r: parseInt(hex.slice(1, 3), 16),
   g: parseInt(hex.slice(3, 5), 16),
@@ -129,6 +158,38 @@ const hslToRgb = (h, s, l) => {
   return [hue(p, q, h + 1 / 3) * 255, hue(p, q, h) * 255, hue(p, q, h - 1 / 3) * 255];
 };
 
+const CLIP_GROW = 12; // px de folga em volta de cada máscara no plano B
+const renderClipped = () => {
+  fallbackImage.style.display = "none";
+  canvas.style.display = "";
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
+  const layer = document.createElement("canvas");
+  layer.width = canvas.width; layer.height = canvas.height;
+  const layerContext = layer.getContext("2d");
+  // do menos para o mais prioritário (mesma ordem de regionForPixel, invertida)
+  ["legs", "feet", "torso", "waist", "arms", "hands", "head"].forEach((key) => {
+    const photo = colorImages[selectedColors[key].name];
+    if (!photo.complete || !photo.naturalWidth) return;
+    const piece = pieces.find((item) => item.key === key);
+    layerContext.globalCompositeOperation = "source-over";
+    layerContext.clearRect(0, 0, layer.width, layer.height);
+    layerContext.fillStyle = layerContext.strokeStyle = "#000";
+    layerContext.lineJoin = "round";
+    layerContext.lineWidth = CLIP_GROW * 2;
+    piece.mask.forEach((polygon) => {
+      layerContext.beginPath();
+      polygon.forEach(([x, y], i) => (i ? layerContext.lineTo(x, y) : layerContext.moveTo(x, y)));
+      layerContext.closePath();
+      layerContext.fill();
+      layerContext.stroke();
+    });
+    layerContext.globalCompositeOperation = "source-in";
+    layerContext.drawImage(photo, 0, 0, layer.width, layer.height);
+    context.drawImage(layer, 0, 0);
+  });
+};
+
 const renderDummy = () => {
   if (!baseImage.complete || !baseImage.naturalWidth) return;
   context.clearRect(0, 0, canvas.width, canvas.height);
@@ -146,34 +207,35 @@ const renderDummy = () => {
   try {
     pixels = context.getImageData(0, 0, canvas.width, canvas.height);
   } catch (error) {
-    // Browsers restrict pixel reads from file:// images. Show the selected color photo
-    // so a local preview still responds; hosted pages use the per-part recoloring below.
+    // Em file:// (ou imagens de outra origem) o navegador bloqueia a leitura de pixels.
+    // Plano B: sem ler pixels, recorta a foto de cada cor dentro da região da peça.
     if (error.name !== "SecurityError") throw error;
-    fallbackImage.src = selectedColors[lastChangedColorKey].image;
-    fallbackImage.style.display = "block";
-    canvas.style.display = "none";
+    renderClipped();
     return;
   }
   fallbackImage.style.display = "none";
   canvas.style.display = "";
   const data = pixels.data;
-  const targetHsl = Object.fromEntries(pieces.map(({ key }) => [key, rgbToHsl(...Object.values(hexToRgb(selectedColors[key].value)))]));
-  for (let y = 0; y < canvas.height; y++) {
-    for (let x = 0; x < canvas.width; x++) {
-      const index = (y * canvas.width + x) * 4;
-      const alpha = data[index + 3];
-      if (alpha < 12) continue;
-      const region = regionForPixel(x, y);
-      if (!region) continue;
-      const r = data[index], g = data[index + 1], b = data[index + 2];
-      // Recolor only the bright yellow plastic; joints and dark outlines stay intact.
-      if (r < 58 || g < 38 || r < b * 1.35 || g < b * 1.1) continue;
-      const source = rgbToHsl(r, g, b);
-      const target = targetHsl[region];
-      const lightness = Math.max(.035, Math.min(.96, target.l * (.74 + (source.l - .58) * .85)));
-      const [nextR, nextG, nextB] = hslToRgb(target.h, target.s, lightness);
-      data[index] = nextR; data[index + 1] = nextG; data[index + 2] = nextB;
+  if (!regionMap) {
+    regionMap = new Array(canvas.width * canvas.height).fill(null);
+    for (let y = 0; y < canvas.height; y++) {
+      for (let x = 0; x < canvas.width; x++) {
+        const index = (y * canvas.width + x) * 4;
+        if (data[index + 3] < 12 || !isYellowPlastic(data[index], data[index + 1], data[index + 2])) continue;
+        regionMap[y * canvas.width + x] = regionForPixel(x, y) || nearestRegion(x, y);
+      }
     }
+  }
+  const targetHsl = Object.fromEntries(pieces.map(({ key }) => [key, rgbToHsl(...Object.values(hexToRgb(selectedColors[key].value)))]));
+  for (let i = 0; i < regionMap.length; i++) {
+    const region = regionMap[i];
+    if (!region) continue;
+    const index = i * 4;
+    const source = rgbToHsl(data[index], data[index + 1], data[index + 2]);
+    const target = targetHsl[region];
+    const lightness = Math.max(.035, Math.min(.96, target.l * (.74 + (source.l - .58) * .85)));
+    const [nextR, nextG, nextB] = hslToRgb(target.h, target.s, lightness);
+    data[index] = nextR; data[index + 1] = nextG; data[index + 2] = nextB;
   }
   context.putImageData(pixels, 0, 0);
 };
