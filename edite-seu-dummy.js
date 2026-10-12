@@ -28,13 +28,13 @@ const accessoryChoices = {
 };
 
 accessoryChoices.torso.push(
-  { name: "4 garras aranha", price: 4, image: "Fotos/Acessórios Dummy/Frontal/Tronco/4 garras aranha 4 reais.png" },
-  { name: "Asa anjo", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Asa anjo 2 reais.png" },
-  { name: "Asa de dragão", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/asa de dragao 2 reais.png" },
-  { name: "Asas metálicas", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Asas metalicas 2 reais.png" },
-  { name: "Asas metálicas móveis", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/asas metalicas mexiveis 2 reaiss.png" },
-  { name: "Braços extras", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Bracos extras 2 reais.png" },
-  { name: "Braços aranha extras", price: 4, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Bracos extras 4 rreais.png" }
+  { name: "4 garras aranha", price: 4, image: "Fotos/Acessórios Dummy/Frontal/Tronco/4 garras aranha 4 reais.png", layer: "front", width: "100%", top: "0%" },
+  { name: "Asa anjo", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Asa anjo 2 reais.png", layer: "back", width: "134%", top: "-14%" },
+  { name: "Asa de dragão", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/asa de dragao 2 reais.png", layer: "back", width: "134%", top: "-14%" },
+  { name: "Asas metálicas", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Asas metalicas 2 reais.png", layer: "back", width: "134%", top: "-14%" },
+  { name: "Asas metálicas móveis", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/asas metalicas mexiveis 2 reaiss.png", layer: "back", width: "134%", top: "-14%" },
+  { name: "Braços extras", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Bracos extras 2 reais.png", layer: "front", width: "100%", top: "0%" },
+  { name: "Braços aranha extras", price: 4, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Bracos extras 4 rreais.png", layer: "front", width: "100%", top: "0%" }
 );
 
 const canvas = document.querySelector("[data-dummy-canvas]");
@@ -46,10 +46,27 @@ const activePartLabel = document.querySelector("[data-active-part]");
 const activeAccessory = document.querySelector("[data-active-accessory]");
 const selectionSummary = document.querySelector("[data-selection-summary]");
 const fallbackImage = document.querySelector(".dummy-fallback");
+const backAccessoryLayer = document.querySelector("[data-accessory-layer-back]");
+const frontAccessoryLayer = document.querySelector("[data-accessory-layer-front]");
 const images = Object.fromEntries(palette.map(({ name }) => [name, new Image()]));
 let selectedColor = palette[0];
 const selectedAccessories = Object.fromEntries(pieces.map(({ key }) => [key, new Set()]));
 const accessoryCursors = Object.fromEntries(pieces.map(({ key }) => [key, -1]));
+
+const renderAccessoryLayers = () => {
+  const selected = pieces.flatMap(({ key }) => accessoryChoices[key]
+    .filter(({ name, image }) => image && selectedAccessories[key].has(name)));
+  const renderLayer = (layer, container) => {
+    container.innerHTML = selected.filter((item) => (item.layer || "front") === layer)
+      .map(({ name, image, width = "100%", top = "0%" }) => `<img class="dummy-accessory-image" src="${image}" alt="${name}" style="--accessory-width:${width};--accessory-top:${top}" loading="eager">`).join("");
+  };
+  renderLayer("back", backAccessoryLayer);
+  renderLayer("front", frontAccessoryLayer);
+  const fullFigureSelected = selectedAccessories.body.has("Aquático");
+  canvas.style.visibility = fullFigureSelected ? "hidden" : "";
+  fallbackImage.style.visibility = fullFigureSelected ? "hidden" : "";
+  frontAccessoryLayer.classList.toggle("has-full-figure", fullFigureSelected);
+};
 
 const renderDummy = () => {
   const image = images[selectedColor.name];
@@ -107,6 +124,7 @@ const renderPartArrows = () => {
       activeAccessory.textContent = `${choice.name} • ${formatMoney(choice.price)}`;
       renderPartArrows();
       renderAccessoryOptions(key);
+      renderAccessoryLayers();
       renderSummary();
     });
   });
@@ -130,6 +148,7 @@ const renderAccessoryOptions = (openKey = null) => {
       else selectedAccessories[accessoryKey].delete(value);
       renderPartArrows();
       renderAccessoryOptions(accessoryKey);
+      renderAccessoryLayers();
       renderSummary();
     });
   });
@@ -154,6 +173,7 @@ palette.forEach(({ name, image }) => {
 renderColorControls();
 renderPartArrows();
 renderAccessoryOptions();
+renderAccessoryLayers();
 renderSummary();
 
 document.querySelector("[data-reset]")?.addEventListener("click", () => {
@@ -164,6 +184,7 @@ document.querySelector("[data-reset]")?.addEventListener("click", () => {
   renderColorControls();
   renderPartArrows();
   renderAccessoryOptions();
+  renderAccessoryLayers();
   renderDummy();
   renderSummary();
 });
