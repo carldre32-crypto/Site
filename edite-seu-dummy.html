@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Monte as cores e os acessórios do seu Dummy 13.">
+  <title>Edite seu Dummy | Apex 3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="edite-seu-dummy.css">
+  <script src="edite-seu-dummy.js" defer></script>
+</head>
+<body>
+  <header class="customizer-header">
+    <a class="brand" href="index.html" aria-label="Voltar para Apex 3D">
+      <img src="logo-apex-3d.png" alt="">
+      <span>Apex 3D</span>
+    </a>
+    <a class="back-link" href="index.html#catalogo">← Voltar ao catálogo</a>
+  </header>
+
+  <main class="customizer">
+    <section class="intro">
+      <p class="eyebrow">Personalização</p>
+      <h1>Edite seu <span>Dummy</span></h1>
+      <p>Monte uma combinação de cores e acessórios para imaginar seu Dummy 13.</p>
+    </section>
+
+    <section class="builder" aria-label="Personalizador do Dummy">
+      <div class="preview-column">
+        <div class="preview-heading">
+          <div><p class="eyebrow">Sua montagem</p><h2>Prévia do Dummy</h2></div>
+          <span class="preview-badge">Prévia ilustrativa</span>
+        </div>
+        <div class="dummy-stage">
+          <svg class="dummy-figure" viewBox="0 0 360 500" role="img" aria-label="Silhueta ilustrativa do Dummy 13, com as cores selecionadas">
+            <defs><filter id="shadow" x="-30%" y="-20%" width="160%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#000" flood-opacity=".38"/></filter></defs>
+            <g filter="url(#shadow)" stroke="#11151b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+              <path class="part-head" d="M155 48 Q180 33 205 48 L214 69 L208 102 Q180 119 152 102 L146 69Z"/>
+              <path class="part-neck" d="M164 111 L196 111 L198 137 L162 137Z"/>
+              <path class="part-torso" d="M137 132 Q180 116 223 132 L239 211 L218 244 L142 244 L121 211Z"/>
+              <path class="part-arm" d="M128 143 L103 153 L78 230 L93 239 L128 195Z"/>
+              <path class="part-hand" d="M78 228 L70 252 L86 264 L101 239Z"/>
+              <path class="part-arm" d="M232 143 L257 153 L282 230 L267 239 L232 195Z"/>
+              <path class="part-hand" d="M282 228 L290 252 L274 264 L259 239Z"/>
+              <path class="part-leg" d="M143 239 L178 239 L173 337 L142 337 L132 280Z"/>
+              <path class="part-leg" d="M182 239 L217 239 L228 280 L218 337 L187 337Z"/>
+              <path class="part-foot" d="M142 332 L173 332 L174 414 L153 425 L134 416Z"/>
+              <path class="part-foot" d="M187 332 L218 332 L226 416 L207 425 L186 414Z"/>
+              <path class="joint" d="M142 210 L218 210 M143 245 L217 245 M142 337 L218 337 M153 132 L207 132"/>
+              <circle class="joint-fill" cx="141" cy="218" r="10"/><circle class="joint-fill" cx="219" cy="218" r="10"/>
+              <circle class="joint-fill" cx="157" cy="338" r="10"/><circle class="joint-fill" cx="203" cy="338" r="10"/>
+            </g>
+            <path class="face-detail" d="M162 76 L174 78 M186 78 L198 76 M171 94 Q180 99 189 94" fill="none" stroke="#20252d" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+          <div class="stage-caption"><span class="stage-dot"></span>A imagem real entra aqui quando você enviar a foto frontal do Dummy.</div>
+        </div>
+
+        <div class="accessory-preview">
+          <button class="arrow-button" type="button" data-accessory-prev aria-label="Acessório anterior">‹</button>
+          <div class="accessory-card" aria-live="polite">
+            <div class="accessory-image-placeholder" aria-hidden="true"><span>+</span></div>
+            <div><p class="eyebrow">Acessório selecionado</p><h3 data-accessory-name>Nenhum acessório</h3><p class="accessory-note" data-accessory-description>Use as setas para explorar. As fotos serão adicionadas depois.</p></div>
+          </div>
+          <button class="arrow-button" type="button" data-accessory-next aria-label="Próximo acessório">›</button>
+        </div>
+      </div>
+
+      <aside class="controls-column">
+        <div class="control-section">
+          <div class="section-title"><div><p class="eyebrow">Passo 1</p><h2>Escolha as cores</h2></div><span class="step-number">01</span></div>
+          <p class="control-help">Selecione uma cor para cada parte do Dummy. A prévia ilustrativa muda junto com as escolhas.</p>
+          <div class="color-controls" data-color-controls></div>
+        </div>
+        <div class="control-section accessory-controls">
+          <div class="section-title"><div><p class="eyebrow">Passo 2</p><h2>Explore os acessórios</h2></div><span class="step-number">02</span></div>
+          <p class="control-help">Navegue pelas opções usando as setas. A visualização de encaixe será atualizada com as fotos dos acessórios.</p>
+          <div class="accessory-position" data-accessory-position>Opção 1</div>
+          <button class="select-accessory" type="button" data-select-accessory>Adicionar à montagem</button>
+        </div>
+        <div class="selection-summary" aria-live="polite">
+          <p class="eyebrow">Sua combinação</p>
+          <p data-selection-summary>Escolha as cores e os acessórios para começar.</p>
+          <button class="reset-button" type="button" data-reset>Limpar escolhas</button>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <footer class="customizer-footer"><span>Apex 3D Impressões</span><a href="index.html#catalogo">Ver catálogo completo</a></footer>
+</body>
+</html>
