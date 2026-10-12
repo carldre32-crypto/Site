@@ -42,7 +42,7 @@ const selectedColors = Object.fromEntries(pieces.map(({ key }) => [key, initialC
 const selectedAccessories = Object.fromEntries(pieces.map(({ key }) => [key, 0]));
 const colorImages = Object.fromEntries(palette.map((color) => [color.name, new Image()]));
 palette.forEach((color) => {
-  colorImages[color.name].addEventListener("load", renderDummy);
+  colorImages[color.name].addEventListener("load", () => renderDummy());
   colorImages[color.name].src = color.image;
 });
 const baseImage = colorImages[initialColor.name];
