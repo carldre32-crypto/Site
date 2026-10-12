@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="edite-seu-dummy.css?v=20261012j">
+  <link rel="stylesheet" href="edite-seu-dummy.css?v=20261012m">
 </head>
 <body>
   <header class="customizer-header">
@@ -65,7 +65,13 @@
             <span class="active-part-label" data-active-part>Selecione uma parte do Dummy</span>
             <strong data-active-accessory>As opções aparecem aqui</strong>
           </div>
-          <p class="accessory-note">A prévia de cada peça será adicionada junto com as fotos dos acessórios.</p>
+          <div class="accessory-options" data-accessory-options></div>
+          <p class="accessory-note">Marque quantos acessórios quiser em cada parte. Os valores são somados ao preço do Dummy.</p>
+          <div class="accessory-observation">
+            <label for="accessory-observation">Observações sobre os acessórios</label>
+            <textarea id="accessory-observation" name="accessory-observation" rows="4" maxlength="500" placeholder="Ex.: gostaria de outra cor para as asas..."></textarea>
+            <small>Você pode pedir mudança de cor para um acessório, desde que seja uma das cores disponíveis: Amarelo, Azul, Preto, Rosa, Verde ou Vermelho.</small>
+          </div>
         </div>
         <div class="selection-summary" aria-live="polite">
           <p class="eyebrow">Sua combinação</p>
@@ -76,6 +82,6 @@
     </section>
   </main>
   <footer class="customizer-footer"><span>Apex 3D Impressões</span><a href="index.html#catalogo">Ver catálogo completo</a></footer>
-  <script src="edite-seu-dummy.js?v=20261012j"></script>
+  <script src="edite-seu-dummy.js?v=20261012m"></script>
 </body>
 </html>

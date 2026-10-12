@@ -10,31 +10,46 @@ const pieces = [
   { key: "arms", label: "Braços", side: "right", top: "37%" },
   { key: "hands", label: "Mãos", side: "left", top: "43%" },
   { key: "waist", label: "Cintura", side: "right", top: "48%" },
+  { key: "body", label: "Corpo inteiro", side: "left", top: "56%" },
   { key: "legs", label: "Pernas", side: "left", top: "66%" },
   { key: "feet", label: "Pés", side: "right", top: "84%" }
 ];
 
+const dummyPrice = 15;
 const accessoryChoices = {
-  head: ["Sem acessório", "Dummy 13 Alternate Heads", "Dummy 13 More Heads", "Máscara de gás"],
-  torso: ["Sem acessório", "Heavy Armor Kit", "Armor Plate Carrier", "Colete IOTV", "Chest Armour Pieces"],
-  arms: ["Sem acessório", "Sword Arm", "Power Claw", "Back Fists Pack", "Extra Hand Poses"],
-  hands: ["Sem acessório", "Back Fists Pack", "Extra Hand Poses", "Power Claw"],
-  waist: ["Sem acessório", "Drop Leg Pistol Holster", "Drop Holsters"],
-  legs: ["Sem acessório", "Spider Walker Mech Legs", "Leg Armor Roller", "Dummy 13 Boots"],
-  feet: ["Sem acessório", "Dummy 13 Boots", "Spider Walker Mech Legs"]
+  head: [{ name: "Dummy 13 Alternate Heads", price: .6 }, { name: "Dummy 13 More Heads", price: 4 }, { name: "Máscara de gás", price: 1.5 }],
+  torso: [{ name: "Heavy Armor Kit", price: 10 }, { name: "Armor Plate Carrier", price: .5 }, { name: "Colete IOTV", price: 3 }, { name: "Chest Armour Pieces", price: 2 }],
+  arms: [{ name: "Sword Arm", price: .5 }, { name: "Power Claw", price: 2 }, { name: "Back Fists Pack", price: 3 }, { name: "Extra Hand Poses", price: 1 }],
+  hands: [{ name: "Back Fists Pack", price: 3 }, { name: "Extra Hand Poses", price: 1 }, { name: "Power Claw", price: 2 }],
+  waist: [{ name: "Drop Leg Pistol Holster", price: 1 }, { name: "Drop Holsters", price: .7 }],
+  legs: [{ name: "Spider Walker Mech Legs", price: 4 }, { name: "Leg Armor Roller", price: 4 }],
+  feet: [{ name: "Dummy 13 Boots", price: .1 }],
+  body: [{ name: "Aquático", price: 5, image: "Fotos/Acessórios Dummy/Frontal/Corpo inteiro/Aquatico 5 reais.png" }]
 };
+
+accessoryChoices.torso.push(
+  { name: "4 garras aranha", price: 4, image: "Fotos/Acessórios Dummy/Frontal/Tronco/4 garras aranha 4 reais.png" },
+  { name: "Asa anjo", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Asa anjo 2 reais.png" },
+  { name: "Asa de dragão", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/asa de dragao 2 reais.png" },
+  { name: "Asas metálicas", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Asas metalicas 2 reais.png" },
+  { name: "Asas metálicas móveis", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/asas metalicas mexiveis 2 reaiss.png" },
+  { name: "Braços extras", price: 2, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Bracos extras 2 reais.png" },
+  { name: "Braços aranha extras", price: 4, image: "Fotos/Acessórios Dummy/Frontal/Tronco/Bracos extras 4 rreais.png" }
+);
 
 const canvas = document.querySelector("[data-dummy-canvas]");
 const context = canvas.getContext("2d");
 const colorControls = document.querySelector("[data-color-controls]");
 const partArrows = document.querySelector("[data-part-arrows]");
+const accessoryOptions = document.querySelector("[data-accessory-options]");
 const activePartLabel = document.querySelector("[data-active-part]");
 const activeAccessory = document.querySelector("[data-active-accessory]");
 const selectionSummary = document.querySelector("[data-selection-summary]");
 const fallbackImage = document.querySelector(".dummy-fallback");
 const images = Object.fromEntries(palette.map(({ name }) => [name, new Image()]));
 let selectedColor = palette[0];
-const selectedAccessories = Object.fromEntries(pieces.map(({ key }) => [key, 0]));
+const selectedAccessories = Object.fromEntries(pieces.map(({ key }) => [key, new Set()]));
+const accessoryCursors = Object.fromEntries(pieces.map(({ key }) => [key, -1]));
 
 const renderDummy = () => {
   const image = images[selectedColor.name];
@@ -74,10 +89,10 @@ const renderColorControls = () => {
 };
 
 const renderPartArrows = () => {
-  partArrows.innerHTML = pieces.map(({ key, label, side, top }) => {
-    const choice = accessoryChoices[key][selectedAccessories[key]];
-    const arrow = `<button type="button" data-cycle aria-label="Próximo acessório para ${label}">›</button>`;
-    const copy = `<span class="part-control-copy"><strong>${label}</strong><small>${choice}</small></span>`;
+  partArrows.innerHTML = pieces.filter(({ key }) => key !== "body").map(({ key, label, side, top }) => {
+    const count = selectedAccessories[key].size;
+    const arrow = `<button type="button" data-cycle aria-label="Adicionar acessório para ${label}">›</button>`;
+    const copy = `<span class="part-control-copy"><strong>${label}</strong><small>${count} selecionado(s)</small></span>`;
     return `<div class="part-control part-control--${side} part-control--${key}" style="top:${top}" data-part="${key}">${side === "left" ? arrow + copy : copy + arrow}</div>`;
   }).join("");
 
@@ -85,21 +100,50 @@ const renderPartArrows = () => {
     control.querySelector("[data-cycle]").addEventListener("click", () => {
       const key = control.dataset.part;
       const choices = accessoryChoices[key];
-      selectedAccessories[key] = (selectedAccessories[key] + 1) % choices.length;
+      accessoryCursors[key] = (accessoryCursors[key] + 1) % choices.length;
+      const choice = choices[accessoryCursors[key]];
+      selectedAccessories[key].add(choice.name);
       activePartLabel.textContent = pieces.find((piece) => piece.key === key).label;
-      activeAccessory.textContent = choices[selectedAccessories[key]];
+      activeAccessory.textContent = `${choice.name} • ${formatMoney(choice.price)}`;
       renderPartArrows();
+      renderAccessoryOptions(key);
+      renderSummary();
+    });
+  });
+};
+
+const formatMoney = (value) => `R$ ${value.toFixed(2).replace(".", ",")}`;
+
+const renderAccessoryOptions = (openKey = null) => {
+  accessoryOptions.innerHTML = pieces.map(({ key, label }, index) => `
+    <details class="accessory-group" data-group="${key}" ${openKey === key || (!openKey && index === 0) ? "open" : ""}>
+      <summary>${label}<span>${selectedAccessories[key].size} selecionado(s)</span></summary>
+      <div class="accessory-options-list">
+        ${accessoryChoices[key].map(({ name, price, image }) => `<label class="accessory-option"><input type="checkbox" data-accessory-key="${key}" value="${name}" ${selectedAccessories[key].has(name) ? "checked" : ""}>${image ? `<img src="${image}" alt="${name}" loading="lazy">` : `<span class="accessory-image-empty" aria-hidden="true">＋</span>`}<span class="accessory-option-name">${name}</span><strong>${formatMoney(price)}</strong></label>`).join("")}
+      </div>
+    </details>`).join("");
+
+  accessoryOptions.querySelectorAll("[data-accessory-key]").forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      const { accessoryKey, value } = checkbox.dataset;
+      if (checkbox.checked) selectedAccessories[accessoryKey].add(value);
+      else selectedAccessories[accessoryKey].delete(value);
+      renderPartArrows();
+      renderAccessoryOptions(accessoryKey);
       renderSummary();
     });
   });
 };
 
 const renderSummary = () => {
-  const accessories = pieces
-    .map(({ key, label }) => ({ label, choice: accessoryChoices[key][selectedAccessories[key]] }))
-    .filter(({ choice }) => choice !== "Sem acessório")
-    .map(({ label, choice }) => `${label}: ${choice}`);
-  selectionSummary.textContent = `Dummy inteiro: ${selectedColor.name}. ${accessories.length ? `Acessórios: ${accessories.join(" · ")}.` : "Nenhum acessório selecionado."}`;
+  const accessories = pieces.flatMap(({ key, label }) => accessoryChoices[key]
+    .filter(({ name }) => selectedAccessories[key].has(name))
+    .map(({ name, price }) => ({ label, name, price })));
+  const accessoriesTotal = accessories.reduce((sum, item) => sum + item.price, 0);
+  const details = accessories.length
+    ? accessories.map(({ label, name, price }) => `${label}: ${name} (${formatMoney(price)})`).join(" · ")
+    : "Nenhum acessório selecionado.";
+  selectionSummary.innerHTML = `<span class="price-breakdown"><span>Dummy inteiro (${selectedColor.name}): <strong>${formatMoney(dummyPrice)}</strong></span><span>Acessórios: <strong>${formatMoney(accessoriesTotal)}</strong></span><span class="price-total">Total: <strong>${formatMoney(dummyPrice + accessoriesTotal)}</strong></span></span><span class="price-items">${details}</span>`;
 };
 
 palette.forEach(({ name, image }) => {
@@ -109,15 +153,17 @@ palette.forEach(({ name, image }) => {
 
 renderColorControls();
 renderPartArrows();
+renderAccessoryOptions();
 renderSummary();
 
 document.querySelector("[data-reset]")?.addEventListener("click", () => {
   selectedColor = palette[0];
-  pieces.forEach(({ key }) => { selectedAccessories[key] = 0; });
+  pieces.forEach(({ key }) => { selectedAccessories[key].clear(); accessoryCursors[key] = -1; });
   activePartLabel.textContent = "Selecione uma parte do Dummy";
   activeAccessory.textContent = "As opções aparecem aqui";
   renderColorControls();
   renderPartArrows();
+  renderAccessoryOptions();
   renderDummy();
   renderSummary();
 });
