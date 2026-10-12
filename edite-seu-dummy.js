@@ -162,25 +162,22 @@ const renderPartArrows = () => {
   partArrows.innerHTML = pieces.map(({ key, label, side, top }) => {
     const choices = accessoryChoices[key];
     const choice = choices[selectedAccessories[key]];
-    return `<div class="part-control part-control--${side} part-control--${key}" style="top:${top}" data-part="${key}">
-      <button type="button" data-step="-1" aria-label="Opção anterior para ${label}">‹</button>
-      <span class="part-control-copy"><strong>${label}</strong><small>${choice}</small></span>
-      <button type="button" data-step="1" aria-label="Próxima opção para ${label}">›</button>
+  const arrow = `<button type="button" data-cycle aria-label="Próximo acessório para ${label}">›</button>`;
+  const copy = `<span class="part-control-copy"><strong>${label}</strong><small>${choice}</small></span>`;
+  return `<div class="part-control part-control--${side} part-control--${key}" style="top:${top}" data-part="${key}">
+      ${side === "left" ? arrow + copy : copy + arrow}
     </div>`;
   }).join("");
 
   partArrows.querySelectorAll("[data-part]").forEach((control) => {
-    control.querySelectorAll("button[data-step]").forEach((button) => {
-      button.addEventListener("click", () => {
-        const key = control.dataset.part;
-        const choices = accessoryChoices[key];
-        const step = Number(button.dataset.step);
-        selectedAccessories[key] = (selectedAccessories[key] + step + choices.length) % choices.length;
-        activePartLabel.textContent = pieces.find((piece) => piece.key === key).label;
-        activeAccessory.textContent = choices[selectedAccessories[key]];
-        renderPartArrows();
-        renderSummary();
-      });
+    control.querySelector("button[data-cycle]").addEventListener("click", () => {
+      const key = control.dataset.part;
+      const choices = accessoryChoices[key];
+      selectedAccessories[key] = (selectedAccessories[key] + 1) % choices.length;
+      activePartLabel.textContent = pieces.find((piece) => piece.key === key).label;
+      activeAccessory.textContent = choices[selectedAccessories[key]];
+      renderPartArrows();
+      renderSummary();
     });
   });
 };
@@ -200,3 +197,16 @@ baseImage.addEventListener("error", () => {
 renderColorControls();
 renderPartArrows();
 renderSummary();
+
+document.querySelector("[data-reset]")?.addEventListener("click", () => {
+  pieces.forEach(({ key }) => {
+    selectedColors[key] = initialColor;
+    selectedAccessories[key] = 0;
+  });
+  activePartLabel.textContent = "Selecione uma parte do Dummy";
+  activeAccessory.textContent = "As opções aparecem aqui";
+  renderDummy();
+  renderColorControls();
+  renderPartArrows();
+  renderSummary();
+});
