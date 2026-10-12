@@ -35,7 +35,9 @@ const partArrows = document.querySelector("[data-part-arrows]");
 const activePartLabel = document.querySelector("[data-active-part]");
 const activeAccessory = document.querySelector("[data-active-accessory]");
 const selectionSummary = document.querySelector("[data-selection-summary]");
+const fallbackImage = document.querySelector(".dummy-fallback");
 const initialColor = palette[0];
+let lastChangedColorKey = "head";
 const selectedColors = Object.fromEntries(pieces.map(({ key }) => [key, initialColor]));
 const selectedAccessories = Object.fromEntries(pieces.map(({ key }) => [key, 0]));
 const colorImages = Object.fromEntries(palette.map((color) => [color.name, new Image()]));
@@ -111,12 +113,27 @@ const renderDummy = () => {
   const sameColor = pieces.every(({ key }) => selectedColors[key].name === selectedColors.head.name);
   const exactPhoto = colorImages[selectedColors.head.name];
   if (sameColor && exactPhoto.complete && exactPhoto.naturalWidth) {
+    fallbackImage.style.display = "none";
+    canvas.style.display = "";
     context.drawImage(exactPhoto, 0, 0, canvas.width, canvas.height);
     return;
   }
   context.drawImage(baseImage, 0, 0, canvas.width, canvas.height);
 
-  const pixels = context.getImageData(0, 0, canvas.width, canvas.height);
+  let pixels;
+  try {
+    pixels = context.getImageData(0, 0, canvas.width, canvas.height);
+  } catch (error) {
+    // Browsers restrict pixel reads from file:// images. Show the selected color photo
+    // so a local preview still responds; hosted pages use the per-part recoloring below.
+    if (error.name !== "SecurityError") throw error;
+    fallbackImage.src = selectedColors[lastChangedColorKey].image;
+    fallbackImage.style.display = "block";
+    canvas.style.display = "none";
+    return;
+  }
+  fallbackImage.style.display = "none";
+  canvas.style.display = "";
   const data = pixels.data;
   const targetHsl = Object.fromEntries(pieces.map(({ key }) => [key, rgbToHsl(...Object.values(hexToRgb(selectedColors[key].value)))]));
   for (let y = 0; y < canvas.height; y++) {
@@ -143,16 +160,31 @@ const renderColorControls = () => {
   colorControls.innerHTML = pieces.map(({ key, label }) => `
     <div class="color-row">
       <label for="color-${key}">${label}</label>
+      <button class="color-step" type="button" data-color-step="-1" data-color-key="${key}" aria-label="Cor anterior para ${label}">‹</button>
       <select class="color-select" id="color-${key}" data-piece="${key}" aria-label="Cor de ${label.toLowerCase()}">
         ${palette.map((color) => `<option value="${color.name}" ${selectedColors[key].name === color.name ? "selected" : ""}>${color.name}</option>`).join("")}
       </select>
+      <button class="color-step" type="button" data-color-step="1" data-color-key="${key}" aria-label="Próxima cor para ${label}">›</button>
     </div>
   `).join("");
   colorControls.querySelectorAll("[data-piece]").forEach((select) => {
     select.addEventListener("change", () => {
       const key = select.dataset.piece;
+      lastChangedColorKey = key;
       selectedColors[key] = palette.find(({ name }) => name === select.value) || initialColor;
       renderDummy();
+      renderSummary();
+    });
+  });
+  colorControls.querySelectorAll("[data-color-step]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const key = button.dataset.colorKey;
+      const current = palette.findIndex(({ name }) => name === selectedColors[key].name);
+      const next = (current + Number(button.dataset.colorStep) + palette.length) % palette.length;
+      lastChangedColorKey = key;
+      selectedColors[key] = palette[next];
+      renderDummy();
+      renderColorControls();
       renderSummary();
     });
   });
@@ -203,6 +235,7 @@ document.querySelector("[data-reset]")?.addEventListener("click", () => {
     selectedColors[key] = initialColor;
     selectedAccessories[key] = 0;
   });
+  lastChangedColorKey = "head";
   activePartLabel.textContent = "Selecione uma parte do Dummy";
   activeAccessory.textContent = "As opções aparecem aqui";
   renderDummy();
